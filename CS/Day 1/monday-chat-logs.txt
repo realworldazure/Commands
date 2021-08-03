@@ -1,0 +1,1362 @@
+00:15:46	Jose Manuel Galarce:	hi from chile
+00:16:21	Jason Crichton:	Edmonton, Alberta.
+00:16:29	Lars Arnth Jessen (Cloud Factory A/S):	Varde, Denmark! :)
+00:17:08	Jarmo Haaranen:	Jarmo, Finland \m/
+00:17:41	Jeff:	Guess I need to talk fast.
+00:17:59	Ted Francis Asuncion:	Slide decks will be shared as well right?
+00:18:14	stephen barry:	Hi from Dallas, Texas
+00:18:27	Jeff:	We should be sharing all slides and code samples.
+00:19:02	michael.groenier:	Olympia, Washington
+00:19:44	bryon howe:	yes
+00:19:45	stephen barry:	yep
+00:19:48	Jose Manuel Galarce:	yes
+00:19:48	Jarmo Haaranen:	yes
+00:19:49	Nick Rimmer:	yes
+00:26:14	Mike Pfeiffer:	Hey folks, please mute yourself
+00:26:19	Mike Pfeiffer:	thanks@
+00:26:24	Mike Pfeiffer:	Thanks!
+00:27:14	Tim Warner:	Hey everyone. In case it affects our bandwidth, would you please turn off your webcams for now? Thanks :)
+00:27:31	Philippe Darveau:	turn off your mic too :)
+00:27:42	Dennis B:	^^
+00:34:35	Dennis B:	I'll be back. fire alarm.. :/
+00:34:57	Tim Warner:	Good timing, Dennis! :)
+00:39:34	Dana Epp:	I'm curious, how many people is PowerShell new to?
+00:41:35	Ted Francis Asuncion:	Not new, but I rely so much on google. :P
+00:42:14	Mads (Genmab):	That's properly not going to change :)
+00:43:56	Tyler:	I've been using it for a few years and we customize/standardize most of our environment using PowerShell
+00:44:32	Jose Manuel Galarce:	i'm not new, but i'm constantly looking for training. in this case the company i work for offered me to participate.
+00:44:40	Nick LaVerde:	I've been learning it for about 6 months now.  I have some basic things scripted but still pretty mediocre with it
+00:45:28	Chad Haeussler:	I've been using it for a few years to automate tasks that save my team time.
+00:45:41	fernanf:	Ben doing it for about five years now. Windows Deployments is all powershell based as well as our vmware infrastructure is all stood up using powercli. 
+00:46:07	Chris Goucher:	Couple years, basic to medium, but rely on peers/Google to really do more of the heavy lifting
+00:46:15	Nick Rimmer:	Been using it for a few years now, more recently using it every day as I am involved in a large automation project.
+00:46:25	Jarmo Haaranen:	Since monad :D
+00:46:30	Razvan-Andrei Zoitanu:	I troubleshoot a lot of (bad) Poweshell, but hardly able to write it from scratch. Couldn't get beyond this knowledge level in 6 years, sad.
+00:46:41	Josh Duffney:	I have PowerShell icon keycaps for my mechanical keyboard… I’ll leave it at that. :)
+00:47:18	Mark Roloff:	^ This guy PowerShells
+00:47:30	Joe Houghes:	Ha, where'd you get those Josh?
+00:47:40	Joe Houghes:	From Monad on for myself.
+00:48:01	Josh Duffney:	http://www.wasdkeyboards.com/index.php/products/printed-keycap-singles/custom-art-cherry-mx-keycaps.html
+00:48:03	Jim Jones:	Hey there Joe...
+00:48:42	Joe Houghes:	Howdy Jim
+00:49:20	Jim Jones:	Snapins are the devil, should be banned and booted from existence
+00:49:32	Tim Warner:	I don't think my wife would let me live if I tried using a mechanical keyboard at home. 
+00:49:46	Jason Crichton:	Like exchange online powershell?
+00:49:53	Dana Epp:	*clickity* *clack*
+00:50:17	Zach Petersen:	Microphones seem to be specifically tuned to pick up mechanical keyboards
+00:50:32	Pieter Jan Geutjens:	isn’t that why they invented noise-cancelling headphones?
+00:50:54	Zach Petersen:	yeah, to block out other sounds so that the mic can more efficiently pick up clickity clack sounds :P
+00:51:21	Tim Warner:	At work I record screencast video all day, so mechanical keyboards are a no-go. Sirens and lawnmowers outside are another matter...
+00:52:34	Gijs Kerstens:	Try recording an instructional video with two <2 year olds around
+00:52:37	Tim Warner:	Bruce Payette, one of PowerShell's original architects, discusses much of the hows and whys of PowerShell in his book Windows PowerShell in Action: https://www.manning.com/books/windows-powershell-in-action-third-edition
+00:52:57	Dennis B:	I'm back. No fire...yet.
+00:53:39	Jim Jones:	Its still early @Dennis B
+00:53:41	Joe Houghes:	Good share Tim, the third edition was a great read after skipping the second
+00:53:49	Tim Warner:	Stumbled across this software this morning: It converts your PowerShell modules into DLLs to protect your code and supposedly get better performance: https://www.psprotector.com/
+00:54:01	Pieter Jan Geutjens:	question for Jeff: in the scripts-functions discussion, where do Modules come into play? As in, when/why do you decide you want to write your functions into an module?
+00:54:25	stephen barry:	Sprechen Sie PowerShell?
+00:54:38	Jim Katoe:	Nein!
+00:54:58	Jason Crichton:	Am I the only one who runs into Azure changing powershell all the time? 
+00:55:09	Jim Katoe:	Surprised he didn’t include declarative language (DSC) as a point on this list
+00:55:27	Brett:	dot-source for the win
+00:56:00	Mike Pfeiffer:	@Jason - yeah Azure in general is a moving target :)
+00:56:07	Pieter Jan Geutjens:	yes tyvm
+00:56:13	Gijs Kerstens:	@jason, the move to "az" is the biggest pain
+00:56:25	Tim Warner:	"Exploring Dot Sourcing in PowerShell" by our friend Adam Bertram: https://mcpmag.com/articles/2017/02/02/exploring-dot-sourcing-in-powershell.aspx
+00:56:40	Brett:	where's the thumbs up button
+00:56:46	Dana Epp:	Jason, I actually see them slowing down on working on Azure PowerShell. Not abandoning, but slowing down.... in favor of az cli. Which is pretty much what I run in PowerShell these days
+00:56:49	Donnie Trumpower:	but isn't that what makes it so much fun? And, no, I haven't upgraded all of my existing scripts to use the Az module yet
+00:56:57	Razvan-Andrei Zoitanu:	is the chat archived too ? lots of useful resources listed already, but hard to follow the speaker AND the chat.
+00:57:04	Josh Duffney:	echoing what Jeff is saying: If I need to share code with my team and others depend on the code, I then convert it to a module and release version of it to not break it for everyone during development.
+00:57:12	Mike Pfeiffer:	Yes, chat logs will be included
+00:57:21	Razvan-Andrei Zoitanu:	Thank you Mike.
+00:57:27	Tim Warner:	@Dana : That makes sense. Azure CLI went through a sea change between V1 and V2, but as a whole the command syntax and structures have been consistent.
+00:57:28	Dennis B:	@mike is the chat dialog going to be available after the stream......thanks for answering that mike.....
+00:57:35	Dana Epp:	Although I have to admit, if I am using Azure CloudShell these days I am defaulting to bash instead of Powershell... loads WAY faster.
+00:57:48	Dana Epp:	Ya az cli v2 is the bomb.
+00:57:52	Mike Pfeiffer:	Yes, chat logs will be included w/ videos and code samples
+00:58:19	Pieter Jan Geutjens:	az interactive ftw! (to start exploring till it’s second nature)
+00:58:38	Jim Katoe:	I guess I better watch what I say then =)
+00:58:56	Sean Alexander:	(Is there a timeline posted of when each session starts, and if there is a break for lunch?)
+00:58:56	Tim Warner:	Fun fact: EVERY Azure Cloud Shell session now runs as a Linux-based Docker container. Originally PowerShell ran in a Windows Server Core container, but performance was absolutely awful.
+00:59:13	Dennis B:	wow that's cool to know.
+00:59:26	Jim Jones:	Huh, today I learned
+00:59:35	Donnie Trumpower:	^^^ that was a VERY noticeable change
+00:59:48	Dana Epp:	@Pieter Ya. az interactive is sweet. Except its ugly in PowerShell on the desktop. Rendered chokes.... and tab complete borks. But man is it sweet to educate when yer not sure. Works perfect in a bash window on the desktop though
+01:00:14	Jeff Miles:	How does one get started with az interactive? first i've heard of it.
+01:00:15	Jarmo Haaranen:	@jeff Amen
+01:00:17	Dana Epp:	@Tim thats an interesting fact. I didn't know that. 
+01:00:24	Jason Crichton:	I haven't seen a better tool than the ISE yet, I'm sad they're bailing on it.
+01:00:32	Dana Epp:	@Jeff type "az interactive" in CLoudShell ;-)
+01:00:42	Gijs Kerstens:	Notepad++
+01:00:49	Tyler:	VS Code
+01:00:51	Jarmo Haaranen:	vi editor
+01:00:54	Pieter Jan Geutjens:	VS code
+01:00:55	Josh Duffney:	Vscode ++
+01:01:13	Jeff Miles:	@dana, thanks!
+01:01:21	Dana Epp:	VS Code with PowerShell and Azure extensions
+01:02:06	Jim Katoe:	git integration with VScode is worth leaving ISE IMHO
+01:02:10	Jason Crichton:	Have they made it run less dog ass slow?
+01:02:42	Dana Epp:	@Jason VS Code? Its one of the more efficient editors I've ever seen. You find it slow? Compared to what, notepad?
+01:03:02	Gijs Kerstens:	So if you have Visual Studio 2019, does Visual Studio Code still provide better features? Never looked into the difference
+01:03:12	Jason Crichton:	Compared to ISE, I haven't used it in a year or more but it took like 2 minutes to load.
+01:03:20	Tyler:	Code is a lightweight VS... much faster
+01:03:29	Josh Duffney:	Vscode is way lighter and I much prefer it to vs
+01:03:39	Pieter Jan Geutjens:	better feature for VS Code: It launches in less than 120 seconds :)
+01:03:39	Brian Tower:	@jason, that's not the case anymore.
+01:03:40	Jason Crichton:	I did not know of vscode. 
+01:03:43	Dana Epp:	@Gijis VS has its place. But when it comes to scripting VS Code just flows better. Quicker. More light weight. And supported more by the community.
+01:03:51	Gijs Kerstens:	Thanks
+01:03:59	Tim Warner:	@Gijs : It depends on your use case. Authoring Azure Resource Manager templates is best in Visual Studio, in my opinion. That said, installing the Azure Resource Manager Tools extension in VSCode gives you a nifty JSON outliner.
+01:04:01	Dana Epp:	Check it out at https://code.visualstudio.com/
+01:04:32	Donnie Trumpower:	I still use the ISE, but will also use VS Code. I'm looking forward to Tim W's talk on setting it up to fully replace ISE once it's configured (I also use full VS for templates, code and whatever else)
+01:04:36	Dana Epp:	Favorite trick.... pipe az output directly to vs code to read JSON easier
+01:04:44	Tim Warner:	Note: PowerShell ISE does not, and will never support, PowerShell Core. You'll need to use VSCode or another editor.
+01:05:01	Jason Crichton:	I'm hoping to get something useful out of that tomorrow.
+01:05:27	Dana Epp:	az webapp list | code - 
+01:05:52	Pieter Jan Geutjens:	also in my experience VSCode is pretty much feature equivalent on Windows, Mac or Linux. Visual studio not so much..
+01:06:26	Tim Warner:	@Pieter : Ain't that the truth. Visual Studio 2019 on Mac falls into the "We're Mac software, so we do our own thing!" trap. Terrible.
+01:06:41	Josh Duffney:	I opened visual studio for Mac and thought what is this notepad? vscode is the same experience on Mac and windows :)
+01:07:03	Gijs Kerstens:	@Tim, yes that's what I use VS for combined with Azure DevOps Repos. Therefor very curious for the IaC part of this course.
+01:07:25	Dana Epp:	I've ran VS Code on a Raspberry Pi. Wouldn't even try that with VS.
+01:07:53	Jason Crichton:	I don't have time to spend every day digging into what they're changing today in powershell so it's hard to know what is changing.
+01:08:10	Pieter Jan Geutjens:	I have a Windows 10 VM in azure with Visual Studio on it, because I like developing with docker containers, and it just was/is not working at this time in VS for Mac..
+01:08:27	bryon howe:	be back soon
+01:08:30	Dana Epp:	On the flip side, while you CAN write Azure Function Apps on VS Code, VS is just a better solution stack for debugging it. So each tool has value.
+01:08:59	Dana Epp:	For PowerShell though.... give VS Code a serious look
+01:09:16	Jason Crichton:	Installing it right now
+01:09:25	Dana Epp:	If you do that, check out https://code.visualstudio.com/docs/languages/powershell
+01:10:25	Gijs Kerstens:	100% true Jeff
+01:10:29	Tim Warner:	Adam Driscoll's PowerShell Pro Tools enables you to convert C# to PowerShell and vice-versa: https://poshtools.com/powershell-pro-tools/
+01:10:44	Dana Epp:	Invoke-WebRequest to the REST endpoints FTW for a lot of hidden Azure gems
+01:11:25	Dana Epp:	Invoke-RestMethod if you want to be accurate.
+01:11:35	Pieter Jan Geutjens:	and I’m pretty sure ‘curl’ is an alias for Invoke-WebRequest in powershell :-)
+01:11:52	Pieter Jan Geutjens:	or was it wget? I forget..
+01:12:15	Dana Epp:	Get-Alias curl
+01:12:21	Jarmo Haaranen:	curl is alis for Invoke-webrequest 
+01:13:13	Jeff Miles:	both curl and wget is an alias for Invoke-WebRequest
+01:14:15	Dana Epp:	 Get-Alias -Definition Invoke-WebRequest
+01:14:25	Dana Epp:	Seems you are right, as well as iwr
+01:15:31	Dana Epp:	The glue? Or the spackle? ;-)
+01:15:37	Josh Duffney:	Both ?
+01:15:50	Josh Duffney:	I need a troll emoji lol
+01:15:55	Dana Epp:	lol
+01:16:24	Dustin Dortch:	“Paint and putty”
+01:16:46	Dana Epp:	Paint? you get that pretty? I bet you use -o table too? :P
+01:16:47	Dustin Dortch:	Hopefully the code isn’t paint and putty, though :)
+01:17:46	Jason Crichton:	I can count on the ISE being on every server at this point.
+01:17:59	Jason Crichton:	Well every windows
+01:18:15	Dana Epp:	Ya. I just wish ISE supported Core.
+01:18:24	Dana Epp:	VS Code does.
+01:18:25	Jim Jones:	choco install vscode
+01:18:52	stephen barry:	VSCode rocks!
+01:19:06	Dana Epp:	AND VS code runs in CloudShell. In Azure CloudShell type "code" and watch what happens
+01:19:09	Josh Duffney:	https://powershell.slack.com/ has a great vscode channel for those who use slack
+01:19:16	Lars Arnth Jessen (Cloud Factory A/S):	choco install vscode-powershell
+01:19:25	Dustin Dortch:	It is very nice to just use VS Code...  you can use it as a Markdown editor (which is good for your documentation that you’re writing), and it has good support for JSON and other things.  Even you’re “just doing PowerShell”.
+01:20:19	Jason Crichton:	 The term 'choco' is not recognized as the name of a cmdlet
+01:20:35	Dana Epp:	Choco is a package manager for windows. You will need to install that to use that command
+01:20:36	Lars Arnth Jessen (Cloud Factory A/S):	https://chocolatey.org/docs/installation
+01:20:41	Jim Jones:	You need to install from chocolatey.org first
+01:20:50	Jason Crichton:	Yeah, so I can just launch the ISE or I can go do a bunch of extra steps.
+01:21:04	Dana Epp:	Check out https://code.visualstudio.com/docs/languages/powershell. It includes the cmd line params to install stuff using COde itself
+01:21:12	Dana Epp:	code --install-extension ms-vscode.powershell
+01:21:35	Dana Epp:	Code will fetch the PowerShell extension and install it for you
+01:23:27	Dana Epp:	@Jeff, do you know if there is anything that will take a Swagger endpoint and scaffold a PowerShell module to stub out the functions?
+01:23:39	Dustin Dortch:	PSSwagger?
+01:23:49	Dana Epp:	Googling...
+01:24:11	Dana Epp:	@Dustin Thanks man... that looks interesting.
+01:24:48	Dana Epp:	Ahhh... it suggests using AutoRest as PSSwagger is no longer being developed
+01:25:06	Dana Epp:	https://devblogs.microsoft.com/powershell/cmdlets-via-autorest/
+01:25:25	Pieter Jan Geutjens:	was just about to mention autorest :)
+01:26:08	Pieter Jan Geutjens:	but I think ps support is still in beta there
+01:26:49	thomas flatley:	another good way to learn is the pskoans   https://github.com/vexx32/PSKoans
+01:27:28	Dana Epp:	Ya, if you npm he @beta it includes Powershell apparently. Seems easy enough... 'autorest --powershell --input-file <swagger_file>'
+01:27:44	Pieter Jan Geutjens:	and *poof* :)
+01:28:07	Dustin Dortch:	Ah, yeah... PSSwagger was renamed to AutoRest, I beleive
+01:28:07	Dana Epp:	Damn. Another rabbit hole for this weekend.
+01:28:08	Pablo Villaronga:	Cool , add the link after the course 
+01:28:11	Dustin Dortch:	or maybe it inspired it
+01:28:16	Dustin Dortch:	one way or the other
+01:28:32	Jeff Miles:	@thomas flately - that psKoans looks awesome, thanks!
+01:28:35	Dana Epp:	Looks like autorest is a replacement for PSSwagger
+01:28:37	Jason Crichton:	Does vscode not have tab complete?
+01:28:59	James Petty:	it does, but you ahve to enable it. Mike Robbins wrote a blog about it last week. its life changing
+01:28:59	Dana Epp:	@Jason Install the PowerShell extension and enable it
+01:29:03	Dustin Dortch:	It does.  You might need to install the extension
+01:29:07	Jason Crichton:	Ah ok thanks
+01:29:08	Jim Jones:	Yes it does. You have to save the file to set the language first as well
+01:29:19	James Petty:	https://mikefrobbins.com/2019/04/16/enable-tab-completion-in-vscode-for-a-powershell-ise-like-experience/
+01:29:22	Dana Epp:	From PowerShell type: code --install-extension ms-vscode.powershell
+
+01:29:51	Dana Epp:	Also check out: https://docs.microsoft.com/en-us/powershell/scripting/components/vscode/how-to-replicate-the-ise-experience-in-vscode?view=powershell-6
+01:30:00	Jason Crichton:	I did but I probably need to relaunch vscode.
+01:30:00	Dustin Dortch:	without saving, you can do <ctrl>+k, m and then type PowerShell
+01:30:05	Jason Crichton:	Oh beauty thanks.
+01:30:15	Dustin Dortch:	that applies the PowerShell linting to an unsaved file
+01:30:28	Pieter Jan Geutjens:	or set in in the GUI in the status bar on the bottom right
+01:30:39	Dana Epp:	Basically you need to add this setting in VS Code:
+01:30:40	Dana Epp:	"editor.tabCompletion": "on"
+01:32:16	Jason Crichton:	Ah yeah ok that makes sense. Got it working.
+01:32:44	Joe Houghes:	Please, please, don't write script variable to the Global scope
+01:33:20	Dustin Dortch:	If you need them persistent, maybe you save them to a CSV or JSON, and then import it (as part of a module)
+01:33:39	Pieter Jan Geutjens:	Question: is there a “best practices” way to make Powershell scripts more secure by encrypting them somehow? Getting away from plain-text?
+01:34:02	Tyler:	scripts or passwords in the scripts?
+01:34:19	Pieter Jan Geutjens:	yes, how would you handle that for example
+01:34:34	Pieter Jan Geutjens:	I would just ask but too much noise here to unmute
+01:34:35	Jarmo Haaranen:	Use DPAPI
+01:34:38	Dustin Dortch:	the short answer is don’t :)
+01:34:39	Dana Epp:	Never put passwords in scripts. 
+01:34:49	Jarmo Haaranen:	for passwords adn secrets
+01:34:53	Dana Epp:	For Azure, use KeyVault and managed service identities
+01:35:02	Jarmo Haaranen:	^Goog
+01:35:04	Dustin Dortch:	Jeff will have a good answer
+01:35:17	Dustin Dortch:	I have heard the spiel before :)
+01:35:28	Dennis B:	lol
+01:36:00	Josh Duffney:	I use credential objects and pass them in as params. http://duffney.io/AddCredentialsToPowerShellFunctions
+01:36:58	Pieter Jan Geutjens:	can you make a credential object that can be used on mutliple machines? Aren’t they encrypted in a computer-specific way?
+01:37:16	Jarmo Haaranen:	$cred = Get-Credential | Export-Clixml -path C:\tmp\foo.xml
+01:37:19	Tyler:	including domains and domain controller names?
+01:37:19	Dustin Dortch:	have the code run from one place
+01:37:30	Josh Duffney:	^^
+01:37:30	Dustin Dortch:	share the code via PowerShell Remoting + JEA
+01:37:34	Jarmo Haaranen:	$cred = import-clixml C:\tmp\foo.xml
+01:37:55	Dustin Dortch:	James Petty has some good sessions on this
+01:38:13	Dana Epp:	$secret = (Get-AzKeyVaultSecret -vaultName "YourVault" -name "YourSecret").SecretValueText
+01:38:44	Gijs Kerstens:	@Dana, so how do you connect to the KeyVault? :'-)
+01:39:02	Dustin Dortch:	With your own creds :)
+01:39:06	Dana Epp:	Run the PowerShell via a service principal given READER access to the KeyVault
+01:39:18	Josh Duffney:	https://devblogs.microsoft.com/powershell/defending-against-powershell-attacks/
+01:39:18	Dana Epp:	THen its int he context of the identity running it. Useful for automation runbooks
+01:39:36	Pablo Villaronga:	Cool 
+01:39:36	Ted Francis Asuncion:	great!
+01:39:40	Pablo Villaronga:	thanks 
+01:40:31	Gijs Kerstens:	True, still means you have those SPN credentials locally somewhere when using automation ;-)
+01:40:56	Dana Epp:	Nope. MSI is your friend. Its scaffolded into the ARM subsystem
+01:41:10	Ted Francis Asuncion:	hi
+01:41:24	Brett:	Can we take a sec to marvel at Mike's chair.  WFH level: black belt
+01:41:24	Ted Francis Asuncion:	any one remembers how much time we have during lunch break?
+01:42:45	Mike Pfeiffer:	@brett LOL
+01:43:04	Mike Pfeiffer:	@ted its on the screen…about 1 min left
+01:43:14	Mike Pfeiffer:	Oh sorry, lunch will be 1hr
+01:44:10	Sean Alexander:	(what time?)
+01:44:27	Mike Pfeiffer:	Noon-ish central time
+01:44:44	Dana Epp:	Jeff is the bomb
+01:44:49	Josh Duffney:	loved it! Awesome chats going on as well
+01:44:53	stephen barry:	ok
+01:45:58	Jason Crichton:	It is good, I'm rusty as all hell so this is hopefully good refresher. I was a pro star at PSv3.
+01:46:07	Dana Epp:	Always be learning.
+01:46:14	Josh Duffney:	^^ ++
+01:46:20	stephen barry:	who here is more developer centric rather than IT Pro?
+01:46:30	Dana Epp:	Can't we be both?
+01:46:43	Joe Fecht:	We can dream 
+01:46:47	Pieter Jan Geutjens:	are you suggesting devs aren’t pro’s? ;)
+01:46:49	Dustin Dortch:	I consider myself both, at this point
+01:46:49	Dana Epp:	Dev and Ops are getting closer together.
+01:46:53	Gijs Kerstens:	DevOps @stephen
+01:47:01	stephen barry:	With DevOps very blurred line right now
+01:47:34	Kevin.rosal:	Im new to Azure, so really looking forward to this topic to help me out
+01:48:06	Dana Epp:	Well welcome to the cloud Kev. 
+01:48:19	Jason Crichton:	I got moved into management but I'm the only one able to deal with this stuff, so I have the worst of both worlds. When our devs stop shitting up our ops I'll be a lot cooler with devops.
+01:48:24	michael.groenier:	i stepped in late on this session.  We dont get access to code until after worshop correct?
+01:48:37	Kevin.rosal:	thanks Dana, i've been on GCP for a while but were pivoting to azure it seems
+01:48:43	Dana Epp:	I kinda like az cli better that PowerShell become feature discovery with -h is so much cleaner. (personal bias)
+01:49:03	Josh Duffney:	https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart-powershell
+01:49:08	Pieter Jan Geutjens:	I was a freelance  SCCM consultant for over 10 years but recently decided the next 10 years will be about cloud and devops
+01:49:17	Dana Epp:	shell.azure.com to follow along
+01:49:44	Jason Crichton:	I'm amazed and terrified how little a lot of my staff and colleagues care about getting knowledgeable about Azure/Cloud stuff. 
+01:49:56	Jason Crichton:	I'm an old school VMware admin, but the writing is kind of on the wall.
+01:50:02	Gijs Kerstens:	Same here Jason
+01:50:02	Josh Duffney:	^^ I have zero exp in cloud glad I’m here
+01:50:10	Dana Epp:	Ya 10 looooooooooooooong minutes
+01:50:14	David Lawlor:	Always sad I cant use cloudshell in my azure work, not available in Govt
+01:50:26	Dana Epp:	Which was why I moved to bash
+01:50:27	Pieter Jan Geutjens:	swap shell -> coffee -> work
+01:50:44	Jason Crichton:	Is anyone able to request access to powershell slack? I hit get-invite and it just sits there in Chrome.
+01:51:12	Josh Duffney:	http://slack.poshcode.org/
+01:51:30	Josh Duffney:	http://ramblingcookiemonster.github.io/PSSlack/
+01:51:53	Pablo Villaronga:	I'm amazed and happy to be here ,to see how little I know , I worked as Devops Engineer for 6 months in Ansible , Docker , Kubernetter , but it was impossible to keep up , my collgues here have 4 years of experience and I;m working now as Migration Engineer / Architect 
+01:52:01	Jason Crichton:	Yeah I know where to apply, it just sits there and never proceeds.
+01:52:29	Mark Roloff:	Pretty sure you should get an email, Jason.
+01:52:31	Jeff Miles:	Question - is there a way to 'pre-create' cloud shell storage for a team of people, in order to enforce resource groups/storage account consistency?
+01:52:36	Gijs Kerstens:	Especially when it comes to Azure SQL the DBA guys and management starts pointing to me to fix/manage it. I'm not a DBA'er guys
+01:52:45	Tim Warner:	@Pablo It sounds like you're working with the right tools, especially in terms of "future-proofing" your IT career. Good for you!
+01:52:46	Jason Crichton:	That's what I expect Mark. But it doesn't seem to be working.
+01:52:52	Pablo Villaronga:	I have a share for USMT and Scripts 
+01:53:05	Josh Duffney:	looking to see if there is a new link for psslack
+01:53:23	Gijs Kerstens:	Curious if I'm the only one around with that experience?
+01:53:45	Jason Crichton:	Gijs if Azure anything flakes it gets dumped in my lap.
+01:54:51	David Lawlor:	Gijs not at all my DBAs seem the most resistant to working in Azure out of all the teams
+01:54:52	Dustin Dortch:	I wish they wouldn’t have changed the aliases for Linux/macOS
+01:54:54	Dana Epp:	A neat trick is if you use a shared storage account with your team you can store a .azure file and share aliasing and PowerShell scripts to make it easy to work as a team (and store in Azure Repos). Fun then to run CloudShell on your phone in the Azure mobile app
+01:55:05	Zach Petersen:	Is git available at all in Cloud Shell?
+01:55:08	Dustin Dortch:	PowerShell aliases Windows commands on Windows... why change?
+01:55:25	Tim Warner:	@Dana : Thanks for that tip. A shared storage account for Cloud Shell is a great idea!
+01:55:30	Jason Crichton:	Oh neat, I didn't realize you can run powershell from the app
+01:55:40	Tim Warner:	@Zach. Yes, Git is present in Azure Cloud Shell.
+01:55:45	Joe Houghes:	Dropping the aliases in Linux/Mac makes sense though, as you don't want to make the assumption that someone is trying to run the less powerful utility of the cmdlet on the native system
+01:55:59	Pablo Villaronga:	Thanks @Tim , its hard to keep up to date  
+01:56:05	Dustin Dortch:	I disagree, but to each their own
+01:56:11	Pablo Villaronga:	and suggest best strategies for migration 
+01:56:14	Jason Crichton:	I just looked at my powershell bookmarks, all my stuff is from 2011. I'm so out of touch.
+01:56:17	Tim Warner:	Full list of tools included in Azure Cloud Shell: https://docs.microsoft.com/en-us/azure/cloud-shell/features#tools
+01:56:21	Dennis B:	beating josh to it.
+
+https://aka.ms/psslack or https://aka.ms/psdiscord
+01:56:27	Dana Epp:	@Jason Ya, you can launch CloudShell from the Azure mobile app... so in a pinch you can run your PowerShell scripts quickly.
+01:56:41	Jason Crichton:	Neat
+01:56:46	Tim Warner:	The VSCode app in Azure Cloud Shell is...........okay. :)
+01:57:06	Dana Epp:	Have a horror story though on how iPhone keyboard can screw you up. Use Resource Locks on prod resource groups ;-) 
+01:57:11	Dustin Dortch:	I was VSCode on iOS... there is a UserVoice request out there :)
+01:57:16	Dana Epp:	<-- War wounds.... don't be me
+01:57:21	Richard Reukema:	Is it just me, or can anyone paste into the cloud shell?
+01:57:41	Dana Epp:	Right click past as text @Richard
+01:57:45	Jason Crichton:	I don't see me doing antyhing from the phone unless it's already hosed.
+01:58:19	Dana Epp:	Hey... vim ain't that bad.
+01:58:22	Dustin Dortch:	It makes sense if you have scripts already built out... but you’re not going to want to go hacking around via your iPhone :)
+01:58:32	Tim Warner:	I've always had a soft spot in my heart for nano editor.
+01:58:34	Josh Duffney:	https://vim-adventures.com/
+01:58:36	Dana Epp:	Although just run code in CLoudShell ;-)
+01:58:54	BrendanReid:	@Josh! That's amazing.
+01:59:09	Zach Petersen:	Nano - wipes the tears away
+01:59:13	Dana Epp:	vi ftw when you are in a dark closet late at night and have to recover a system. Its usually the only editor around in Linux.
+01:59:15	Jason Crichton:	Nano for life
+01:59:45	Pieter Jan Geutjens:	vim once you get used to it really does let you keep your hands on the keyboard all the time
+01:59:48	Pieter Jan Geutjens:	can be a time saver
+02:00:12	Pieter Jan Geutjens:	but you need to put in time to create the muscle memory so to speak
+02:00:34	Pieter Jan Geutjens:	and remap ESC key.. :D
+02:00:52	Rob van der Vaart:	Is the storage depending of the license we have?
+02:01:14	Ted Francis Asuncion:	I don't think so
+02:01:31	Dana Epp:	Ya. I learned vi the hardway. 25 years ago I got locked in a server room and couldn't get out. I had to get a SCO Unix machine up and running so I could telnet out to msg someone to come unlock the door. It was painful... but a great life less.... having vi knowledge has served me well on so many environments over the decades.
+02:02:03	Gijs Kerstens:	If you can create a Storage Account you can use CloudShell
+02:02:29	Gijs Kerstens:	My bad...
+02:03:01	Brett:	@Dana: https://memegenerator.net/img/instances/59112096.jpg
+02:03:48	Jason Crichton:	@dana I just bang really hard on the door and wall.
+02:03:52	Dana Epp:	They brought me a pizza to apologize for locking me in there all night. So all good
+02:04:27	Freyr:	How can we see which storage accunt is being used, from the cloud shell?
+02:04:28	Jason Crichton:	Hah
+02:05:03	Tim Warner:	Azure Pricing Calculator: https://azure.microsoft.com/en-us/pricing/calculator/
+02:05:23	Tim Warner:	Azure storage account pricing: https://azure.microsoft.com/en-us/pricing/details/storage/
+02:06:04	Jeff Miles:	@Freyr, in the cloudshell, type this cmdlet:
+
+Get-CloudDrive
+02:07:04	Freyr:	Thanks
+02:07:32	Pieter Jan Geutjens:	I only just now discovered the file browser in the cloud shell when you click on () :o
+02:07:42	Pieter Jan Geutjens:	{} sorry
+02:08:15	Gijs Kerstens:	Adding to that: Type "clouddrive unmount" or "clouddrive mount" to disconnect / connect a file share
+02:08:17	Dana Epp:	az storage share list
+02:08:53	Jeff Miles:	@Gijs, will that permanently persist?
+02:09:02	Tim Warner:	Those *-CloudDrive commands are super useful
+02:09:16	Rob van der Vaart:	hmmmm
+No valid subscriptions found
+02:09:37	Dana Epp:	You need a subscription in Azure to create the storage account.
+02:09:55	Dustin Dortch:	You’re going to want one for all of the other material here, too
+02:09:57	Dana Epp:	So you may need to sign up for the trial, or register your creditcard for PAYG
+02:10:25	Tim Warner:	Fun fact: Microsoft stages huge pools of these Cloud Shell containers around  the world. Based on your connecting IP's geo-location, you get connected to a cloud shell container that is closest to you.
+02:10:38	Dana Epp:	If you don't have a subscription in Azure start here : https://azure.microsoft.com/en-us/free/
+02:11:02	stephen barry:	seems like it would be easy to keep scripts in GIT and then work with them on the azure file share.
+02:11:08	Dana Epp:	Or if you have MSDN you should have free credits to use for Azure.
+02:11:44	Gijs Kerstens:	I think so Jeff, not 100% sure. As persistent as Login-AzureRMAccount I guess
+02:12:04	Gijs Kerstens:	Have to leave for now, will be back later. Thanks so far
+02:12:15	Jeremy Schuller:	Does Azure Account extenstion authentication support/accomidate Azure MFA?
+02:12:15	Jim Katoe:	ooh he said mac
+02:12:19	Dana Epp:	@Tim ya.... they eat the cost so we don't have a pure cold start. Thats how they improved perf for CloudShell. The containes aren't on hot standby. Crazy, but effective.
+02:13:09	Lars Arnth Jessen (Cloud Factory A/S):	what did u write to connect?
+02:13:14	Dana Epp:	@Jeremy Yes, the auth flow for IdP does support MFA if you are doing interactive login. Different story for automated scripts... which is where service principals are useful
+02:13:39	Dana Epp:	There is also device code flow as a fall back
+02:14:23	Freyr:	Does this session also dropout after 20 mins?
+02:14:40	Dana Epp:	Yes. CloudShell always drop after 20min of inactivity
+02:15:06	Kevin.rosal:	yes
+02:15:07	Dana Epp:	Read it loud and clear
+02:15:07	Jim Katoe:	looks good for me
+02:15:09	Pieter Jan Geutjens:	looks ok
+02:15:10	phil gainley:	long running tasks we ahve to either run locally or via azure automation?
+02:15:11	Jarmo Haaranen:	It's ok
+02:15:11	Zach Petersen:	looks great
+02:15:13	Jim Jones:	It looks great but we missed the command to connect
+02:15:17	Pablo Villaronga:	I see ok 
+02:15:27	Holge:	no need to change anything
+02:15:40	Jim Katoe:	command palette - Azure: Sign in to Cloud
+02:15:51	Jim Katoe:	@jim Jones
+02:15:51	Pablo Villaronga:	Anyone has migrated a company to Azure ? 
+02:16:04	Jason Crichton:	The Azure Account Command list is rather deceptive. I somehow down "Azure: Sign In" is a valid command.
+02:16:05	Pablo Villaronga:	no Onprem infra any more ?  
+02:16:23	Jason Crichton:	Our primary DC is all Azure, we have a lot of small sites still on prem though.
+02:16:42	Nick LaVerde:	We've migrated clients to cloud platforms but not Azure.  The price model has been confusing.
+02:16:43	Dana Epp:	To understand the limitations on CloudShell, Microsoft has been pretty open about it : https://docs.microsoft.com/en-us/azure/cloud-shell/limitations
+02:16:49	Pablo Villaronga:	i'm dealing with issues to LDAP 
+02:16:55	Jarmo Haaranen:	We have migrated lot's of our customers to Azure
+02:17:07	Pablo Villaronga:	to modify users and permissions 
+02:17:08	Jason Crichton:	Pricing is black magic until you get a bill.
+02:17:25	Jason Crichton:	What are you trying to do Pablo?
+02:17:45	Pablo Villaronga:	i need to add 4000 workstations to Azure in a new Tenant 
+02:17:57	Richard Reukema:	what was that extension for VS Code - VS Code was updating!
+02:18:01	Jason Crichton:	Are you running on prem AD?
+02:18:01	Pablo Villaronga:	my company is all DEvelopers with standalone machines 
+02:18:10	Jim Jones:	@richard Azure Account
+02:18:11	Jason Crichton:	So no local AD?
+02:18:14	Pablo Villaronga:	pretty muich cool developr culture 
+02:18:22	Pablo Villaronga:	no AD , jumpcloud as AD 
+02:18:27	Jarmo Haaranen:	Pablo Azure Ad join
+02:18:29	Jarmo Haaranen:	?
+02:18:30	Pablo Villaronga:	but was very deceptive 
+02:18:33	Jason Crichton:	Not familiar with jumpcloud.
+02:18:47	Jason Crichton:	You probably want to look at Azure AD then
+02:18:52	Pablo Villaronga:	Actually i;m building a new project in Github 
+02:19:00	Jason Crichton:	We use it kind of but we sync everything from on prem AD using AD Connect.
+02:19:14	Pablo Villaronga:	to add macchines to domain with 1 click , encrypt with bitlocker, 
+02:19:21	Pieter Jan Geutjens:	Pablo, look into ARM templates or terraform
+02:19:22	Jarmo Haaranen:	Pablo of coures if need to support LDAP then you could use Azure AD DS 
+02:19:46	Pablo Villaronga:	i had a lor of problems for test when I spoinned up a new DC in Azure 
+02:19:52	Pablo Villaronga:	duplicated accounts 
+02:20:47	Jason Crichton:	Hmm odd, if Azure is connected to your on prem network it should be trivial to add a DC. But if you're not using AD on prem you need to create net new, not sure where the duplicate would be from.
+02:22:04	Pablo Villaronga:	This is the Project : https://github.com/paulvill76?tab=projects
+
+02:22:09	Jim Katoe:	or your networking is poor and bad replication is causing dupes
+02:22:22	David Lawlor:	Jason he said he was using Jumpcloud not true AD
+02:23:01	Jason Crichton:	Oh right
+02:23:31	Jason Crichton:	I have zero functional knowledge of jumpcloud.
+02:23:32	Marvier Griffith:	vscode is changing terminals
+02:23:35	Pieter Jan Geutjens:	could this be of use: https://github.com/geekmuse/terraform-provider-jumpcloud
+02:23:46	Pablo Villaronga:	Actually i'm working as first time , with some support from MS , its like new implementation 
+02:23:47	Marvier Griffith:	essentially copying and running it is like doing F8, no?
+02:24:07	Pablo Villaronga:	there's not a lot of best practices around 
+02:25:04	Jocelyn Oudesluys:	what do I need to install for the get-az* modules? I thought I followed everything but it's telling me it's not recognized.
+02:25:10	Tim Warner:	Relevant: The Az.Compute commands: https://docs.microsoft.com/en-us/powershell/module/az.compute/?view=azps-1.8.0
+02:25:15	Jason Crichton:	We maintained our existing AD environment and literally just lift and shifted into Azure November 2017. It was hell, but I've learned a ton of design considerations.
+02:25:49	Pieter Jan Geutjens:	@Jocelyn are you in cloud shell?
+02:25:59	David Lawlor:	@Jason we are about to do that also, just waiting for Express Route provisioning, we are also lifing and shifting our mainframe to emulator on Azure
+02:26:24	Jocelyn Oudesluys:	@Pieter vscode
+02:26:27	Jeff:	Another option iis to prompt with Read-Host which you can also tell it to create a secure strng
+02:28:39	Dana Epp:	@Jocelyn but did you log into CloudShell in VS Code?
+02:28:53	Jason Crichton:	@David the Express-Route and network configuration was probably the biggest hassle. At the time you couldn't move between subnets, can't remember if that changed.
+02:29:40	Tim Warner:	Just-in-time learning :)
+02:29:41	Pablo Villaronga:	Its it Aweesome ! 
+02:29:43	Jason Crichton:	We screwed ourselves a few times and Azure was extremely rigid.
+02:30:13	David Lawlor:	For fun we are also replacing our Nutanix/vmware with Azure Stack for whats being left on premise
+02:30:16	Jason Crichton:	We ended up moving a second time cause the CIO realized we could save 10% if we were in USWest2, so we fixed a lot of mistakes.
+02:30:30	Jason Crichton:	Bold. I'm going to Nutanix/VMware on prem
+02:30:58	David Lawlor:	trying to keep a single pane of training for a limited staff
+02:31:04	Jocelyn Oudesluys:	I logged into my azure account. I'm not sure what you mean, I'm having trouble keeping up and I'm missing what these things are.
+02:31:05	Jason Crichton:	Ah yeah.
+02:31:20	Dana Epp:	Left & shift to Azure will be the first stage of hybrid cloud for a lot of companies. IaaS will be here for a while yet.
+02:31:24	Jason Crichton:	I have a decade of VMware experience and not enough Azure experience.
+02:31:24	Dana Epp:	Lift
+02:31:37	Jason Crichton:	So not changing on prem design makes sense for us.
+02:31:41	Jason Crichton:	At least till someone gets bored.
+02:31:42	Pieter Jan Geutjens:	@Jocelyn outside Azure Cloudshell you should start by installing the azure module
+02:31:44	Pieter Jan Geutjens:	see: https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-1.8.0
+02:31:53	Mads (Genmab):	I have IPSec tunnels between all our datacenters to azure, would you still use cloudshell for accessing one VM like that you just did?
+02:32:07	Pieter Jan Geutjens:	or tldr; Install-Module -Name Az -AllowClobber
+02:32:09	Tim Warner:	Everyone: Please don't worry too much about keeping up, missing important info, etc. (1) You'll have the recordings. (2) We're saving the chat transcript. (3) We're sharing all our source with you. (4) We'll stay in touch after class. Hope that helps.
+02:32:40	Dana Epp:	Ya. THink of Azure in that scenario to be a more latent subnet ;-) There is enough virtual network gateway capabilities to allow you to migrate over time without impacting too much... as LONG as you have a resilient Internet connection.
+02:33:37	Pablo Villaronga:	now into , Keyvault , Open VPN VM , Domain SErvices , LDAPS, Certificates , etc 
+02:33:59	BrendanReid:	@Tim thanks!
+02:34:25	Tim Warner:	about_Profiles: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6
+02:34:26	Jason Crichton:	@Tim that is good cause I'm struggling to follow.
+02:34:31	Pablo Villaronga:	@Jason , this is the second Tenant I spin up as a test , third DC and Lot on going Learning , VM;s , openVPN
+02:34:44	Dana Epp:	Ya, its not an all or nothing. As an example... you can lift and shift your VM into Azure. Then over time enable MSI and take advantage of KeyVault. SLowly migrate your IT loads and take advantage of Azure services that make sense for your business.
+02:34:51	Jason Crichton:	That's a lot more complex than what we're doing @Pablo
+02:35:37	Tim Warner:	My recommendation for y'all is to take advantage of this live environment by asking questions, talking shop, and getting the overall feel of what's going on. Training like this is almost always "fast and furious." You'll have time to gradually absorb the new knowledge, skills, etc.
+02:36:16	Marvier Griffith:	Write-Host is now just Write-Information wrapped :)
+02:36:26	Pieter Jan Geutjens:	Write-Host = best debug tool ever :P
+02:36:34	Mark Roloff:	@Tim, do you know when the recordings will be available? Might be nice to review them on the flight to Summit this weekend.
+02:36:35	Josh Duffney:	How do you mount the shell drive to your local vscode editor?
+02:36:43	Pablo Villaronga:	@Dana , Any BestPractices for a full Company migration to Azure ?
+02:36:49	Tim Warner:	To Marvier's point: Write-Information vs Write-Host: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-information?view=powershell-6
+02:37:25	Jeff:	Sorry Pablo about all the private messages. Don't know how that clicked over to you. 
+02:37:27	Dana Epp:	Check out the Azure Migration Center @Pablo : https://azure.microsoft.com/en-us/migration/
+02:37:43	Elmar Atlason:	how did you get "get-azVM" in code ?
+02:38:08	Jeff:	PowerShell profiles are cumulative going from the most general to the most specific, ie user.
+02:38:19	Tim Warner:	@Pablo: One important architectural question is your team deciding whether you'll use Microsoft native Azure migration tools or a third-party independent software vendor.
+02:38:21	Pablo Villaronga:	@Dana Thasks ! 
+02:38:30	Joe Fecht:	Yes sir
+02:38:33	Dennis B:	it's 12:23 *
+02:38:34	Jason Crichton:	The fun part is when you hose your profile and need to reset it back to default.
+02:38:35	Dana Epp:	No problem Pablo
+02:39:07	Joe Fecht:	Can you go over how to connect to VSCode to Azure again
+02:39:08	Pablo Villaronga:	Actually I'm the advisor for all company , so fat i'm creatingg a new Tenant 
+02:39:18	Marvier Griffith:	cloud shell is sooo cool! so many ideas running around my head now for how we can use this
+02:39:32	Pablo Villaronga:	and migrating 4000 worstations , I need to get rid of Jumpcloud  which is complaicated 
+02:39:37	Pablo Villaronga:	Open VPN is working 
+02:39:51	Pablo Villaronga:	so , yes there is a lot of Third party software 
+02:40:06	Jeff Miles:	@Joe Fecht, this is a quick overview of integrating it to VSCode: https://microsoft.github.io/AzureTipsAndTricks/blog/tip49.html
+02:40:16	Josh Duffney:	What happens to modules that you install in cloud shell? Does it put then in the storage account?
+02:40:20	Pablo Villaronga:	we are a 600 developer company , but so far all standalone or in the WEb 
+02:40:30	Pablo Villaronga:	thanks Joe
+02:40:58	Tim Warner:	@Josh: Yes. You can Install-Module to your heart's content, and Cloud Shell stores them in your cloud drive.
+02:41:18	Pieter Jan Geutjens:	@Joe Do you want to move your build workstations into the cloud or just the build pipelines of the applications you build?
+02:42:21	stephen barry:	Is cloud shell syntax same as AZ MODULE?
+02:42:22	Dana Epp:	"az vm run-command invoke" is available to everyone
+02:42:40	stephen barry:	should we just standardize on az module?
+02:42:56	Tim Warner:	@Dana That's a good advertisement for Azure CLI. I like to use Azure CLI in interactive mode: az interactive
+02:42:59	Joe Fecht:	Thanks Jeff!
+02:43:04	Jeff:	VSCode and the CloudShell extension will continued to be updated.
+02:43:06	Brett:	*Question* what does mfa look like for connecting VSCode to the CS?
+02:43:16	Brett:	...if it's there...
+02:43:47	Dana Epp:	Brett, when signing in it goes through interactive IdP... which launches the browser, and the MFA prompts there
+02:43:50	Dustin Dortch:	it should prompt you with the ADAL window
+02:44:04	Jason Crichton:	I just tried it
+02:44:23	Dustin Dortch:	I just did it and was prompted
+02:44:24	Jason Crichton:	It does work, it launches when you run connect-azureRM for example through VScode.
+02:44:30	Brett:	ah, at sign-in sure
+02:44:31	mustafa hasani:	how do you go by importing other modules for azure shell for example exchange online shell?
+02:44:36	Jason Crichton:	MFA in Azure powershell is a pain.
+02:44:51	Dana Epp:	You can also use DeviceCode flow if you want
+02:44:59	Brett:	thanks all, top-notch
+02:45:01	Dustin Dortch:	The Exchange Online PowerShell Module is odd... you need to get it loaded, and then there is some string of what you have to run to import it
+02:45:22	Jim Jones:	That's an extension of connecting to the on-prem exchange shell
+02:45:22	Dustin Dortch:	someone has code that “finds” it
+02:45:25	Jason Crichton:	EXOP is the worst
+02:45:50	Pablo Villaronga:	ok
+02:46:05	Jose Manuel Galarce:	ok
+02:46:25	Dustin Dortch:	https://social.technet.microsoft.com/Forums/windows/en-US/6673b735-3b60-49b2-948c-930dac9c3548/how-to-import-mfa-enabled-exchange-online-powershell-module-in-ise?forum=onlineservicesexchange
+02:46:32	Dustin Dortch:	2nd comment
+02:46:39	Mark Roloff:	Exchange Online really just implicit remoting, if I'm remembering right. Janky as all hell the way they did it.
+02:46:52	Jeff Miles:	Does anyone know if the cloud shell identity can authenticate and work with resources from multiple Azure AD directories? I've got a terraform use-case that breaks because of this. 
+02:46:57	Jason Crichton:	It's so needlessly complicated and convoluted.
+02:48:11	Mark Roloff:	Wrote a CLI menu based tool a while back that wrapped EXO and trying to handle output or errors from it was a total PITA.
+02:48:19	Jeremy Schuller:	@jeff Miles    Is that Multiple Azure AD directories within the same Azure tenant or multiple Azure tenants?
+02:48:40	Dustin Dortch:	It is called a ClickOnce installer
+02:48:49	Dustin Dortch:	it checks for updates when you run it
+02:49:08	Dustin Dortch:	The Exchanged HCW is the same framework
+02:49:36	Jeff Miles:	Multiple tenants - I want to use a data source from one tenant to create a VNET peer between VNETs that exist in subscriptions tied to different directories. 
+02:49:51	Dana Epp:	Holy cow.... code folding in ISE. @Jeff you masocist
+02:50:09	Dustin Dortch:	That is “Presentation Mode”
+02:50:11	Jason Crichton:	There is a GUI based setup that will put all the Azure/O365/EXOP startups in one place, I just can't remember the URL.
+02:50:12	Jeff Miles:	I can do it with Terraform using multiple aliased providers and service principals, but I'd much rather use Terraform within the cloud-shell for dynamic authentication instead. 
+02:50:43	Dustin Dortch:	I wish they would add regions for folding in VS Code
+02:51:06	Dana Epp:	@Jeffmiles... have you checked out https://docs.microsoft.com/en-us/azure/terraform/terraform-cloud-shell
+02:51:23	Dustin Dortch:	Maybe it is new... I haven’t tried for a while
+02:51:45	Dana Epp:	I'm just giving you a hard time ;-)
+02:52:41	Joe Houghes:	@Dustin Dortch Region folding works in VSCode
+02:54:06	Dustin Dortch:	It isn’t working for me... maybe it is a setting
+02:55:09	Tim Warner:	@Dustin Check out this VSCode extension. I haven't tested it yet, though: https://marketplace.visualstudio.com/items?itemName=maptz.regionfolder
+02:55:20	Jim Jones:	Late getting back, waht's the name of this session?
+02:55:33	Brett:	PowerShell Principles
+02:55:45	Jim Jones:	Thanks
+02:56:41	Jason Crichton:	Here we go, what I was looking for. This kind of centralizes all the various powershells. Hopefully it's not needed for long. https://docs.microsoft.com/en-us/office365/enterprise/powershell/connect-to-all-office-365-services-in-a-single-windows-powershell-window
+02:56:49	Dana Epp:	One of the reasons Azure cmdlets in Powershell is still useful. az cli in Powershell doesn't support tab completion :(
+02:57:49	Pieter Jan Geutjens:	does az interactive work in the powershell shell?
+02:58:20	Tim Warner:	@Pieter: Yes, you can use az interactive in Azure Cloud Shell as well as in your local Azure CLI installation.
+02:58:27	Dana Epp:	Ya. But there are some terminal output issues depending on how you have it setup. Especially if you use custom colors in your PowerShell. Works flawless on CLoudShell though
+02:58:56	Tim Warner:	Don't get me started on Windows 10 update cadence. GRRRRR
+02:59:12	Joe Houghes:	Fail fast...
+02:59:13	Pieter Jan Geutjens:	az works in the powershell shell, but az interactive gives me a big error
+02:59:54	Pieter Jan Geutjens:	¯\_(ツ)_/¯
+02:59:54	Tim Warner:	Azure CLI is a separate installation from PowerShell: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
+02:59:55	Dana Epp:	Check if there is an updated CLI MSI package. They have been updating it lately.
+03:00:29	Dana Epp:	Some updates to python recently thar borked interactive mode. Latest CLI package cleans that up
+03:00:42	Pieter Jan Geutjens:	i’m talking cloud shell still
+03:00:56	Pieter Jan Geutjens:	so should be up to date I hope :)
+03:01:00	Dana Epp:	@Pieter whats the error you are getting in CloudShell?
+03:01:06	Jim Jones:	Is there a way to do an elevated session from within VSCode?
+03:01:11	Tim Warner:	Get-Help -Force -ErrorAction SilentlyContinue
+03:01:43	Pieter Jan Geutjens:	@Dana cannot import name 'DEFAULTS_SECTION'
+03:01:49	Josh Duffney:	@Jim you’ll have to run vscode as admin to elevate it’s terminal sessions
+03:01:55	Jason Crichton:	@jim that's a good question. Is there a way to deal with when I have to run something as Administrator in powershell?
+03:01:56	Dana Epp:	@Jim use runas ?
+03:02:05	Jason Crichton:	That is incredibly annoying.
+03:02:26	Linda:	this is great for a newbie to PowerShell
+03:02:28	Dana Epp:	Start-Process powershell.exe -Verb runas
+03:02:47	Jason Crichton:	@linda it is good stuff.
+03:02:56	Linda:	agreed
+03:03:25	Jason Crichton:	-showwindow?
+03:04:01	Tyler:	right click a powershell icon, then shift-right click and select run as admin or right-click the windows icon in the bottom left and select "Windows Powershell (Admin)"
+03:04:48	Pieter Jan Geutjens:	also an option: select the icon and press ctrl+shift+enter
+03:05:14	Jim Jones:	Correct but the q was to make VSCode run code in the integrated console in an elevated session
+03:05:24	Jason Crichton:	The problem is they have basically just incentivised running it as admin all the time.
+03:05:37	Tyler:	@Jim, I missed that.. sorry
+03:07:52	Dana Epp:	@Jim try this: runas /user:Administrator "powershell.exe"
+03:10:21	Pablo Villaronga:	Cool 
+03:11:00	Chris Goucher:	awesome refresh - thanks
+03:11:55	Dana Epp:	That will start a new powershell console as admin, but does require a password (which is good). Make sure you exit out of it to kill the elevated session once you complete the task. or better yet, call runas for a single execution of the powershell script instead of leaving a shell open elevated... which allows for accidental evil things.
+03:12:22	Dana Epp:	(or purposeful evil things if thats your thing)
+03:12:50	Dana Epp:	You can pass in any identity there, so instead of using local admin, you could pass in a domain admin
+03:13:36	Tim Warner:	Forgive me if you've already mentioned this, but you can always run VSCode itself as administrator. Windows 10 allows only one admin VSCode instance running at a time. If memory serves, opening VSCode on Windows Server always opens the editor elevated.
+03:14:27	Tim Warner:	Jeff's discussing a common PowerShell misconception: dir is NOT the ancient MS-DOS dir. Same with cls. Same with...
+03:14:42	Dana Epp:	Ya, but its bad practice to run the whole thing elevates, as it sets a precedence to edit and run everying with higher elevation. Principle of least privilege applies here. And gawd lets hope people are not installing VS Code on servers ;-)
+03:14:42	Marvier Griffith:	yep, was gonna mention that Tim
+03:15:03	Jim Jones:	Ok, cool, that works. Thanks Tim
+03:15:43	Tim Warner:	If I need to write some code and I need elevated creds to do so, running VSCode process elevated maintains least privilege. I need the admin token as a minimum priv. :)
+03:15:54	Dana Epp:	As an example, if you were logged in as a domain admin and ran VS Code and were using ADFS to Azure, your Azure shell is in the principal as the domain admin instead of the restricted admin. 
+03:16:20	Tim Warner:	I always run my systems as a standard user in Windows.
+03:16:31	Dana Epp:	THe whole purpose of PIM and the elevated token switching is to allow elevation at time of use.
+03:17:08	Dana Epp:	@Tim Ya me too. And I do prompt consent, not confirm to ensure a cred is entered on elevation all the time
+03:17:17	Stephane Tardif:	in the powershell ISE you start type a command, tab complete it and press F1.  this opens the help about that command  with the -showwindow param
+03:18:24	Jim Jones:	Can you use new-alias to call the full path of an exe? So if I want to run notepad++ for example?
+03:18:28	Tim Warner:	One bit of security-related trivia: VSCode is in many ways a specialized web browser. The tool uses Node.js in the back and Chromium/V8 in front.
+03:20:22	Pieter Jan Geutjens:	@Tim using https://electronjs.org/ right?
+03:20:52	Joe Houghes:	@Jim Jones Yes, you can alias to an executable full path
+03:22:05	Tim Warner:	@Pieter: Yes, at base, VSCode is an Electron desktop app. The code editor is Monaco, the browser-based editor used in Azure DevOps/formerly Visual Studio Team Services.
+03:22:49	Pieter Jan Geutjens:	super interesting info!
+03:23:58	Tim Warner:	SHiPS is an open-source provider provider. :) You use it to more easily build your own PowerShell providers: https://github.com/PowerShell/SHiPS
+03:29:37	Dennis B:	very interesting.
+03:30:28	Dana Epp:	Oh sure... use a customer powershell module about food just before lunch.
+03:30:35	Dana Epp:	s/customer/custom
+03:30:45	Mike Pfeiffer:	haha
+03:30:50	greg white:	using powershell ISE can't seem to find network ddrives where scripts exist or usb drives.  is this by design or do I have something set up wrong?
+03:30:58	Pieter Jan Geutjens:	ha, luckily it’s past dinnertime here by now :D
+03:31:05	Tim Warner:	Here is a link to Jeff's PSTeachingTools module, which he's using now: https://github.com/jdhitsolutions/PSTeachingTools
+03:31:05	Jim Jones:	lol, Get-Lunch -Name Bacon 
+03:31:18	Nick Rimmer:	Just had mine watching this :-)
+03:31:31	Dennis B:	bacon?
+03:31:48	Nick Rimmer:	Steak Pie
+03:31:55	Dana Epp:	Bacon is a vegetable. Jeff can add it to his module. All good.
+03:32:05	phil gainley:	i am hungry Get-Dinner
+03:32:52	Dana Epp:	New-Vegetable -n Bacon
+03:33:12	Brett:	<control error>
+03:34:58	Pablo Villaronga:	i'll be hungry in a minutes , will we Get-Break ? 
+03:35:28	Dennis B:	Get-Vegetable | Remove-Item?
+03:35:42	Pablo Villaronga:	Jeff can override categories , make Bacon a vegetable *Alias*
+03:36:21	Pablo Villaronga:	az
+03:36:22	Tim Warner:	The "holy trinity" PowerShell cmdlets: https://communary.net/2015/01/20/the-holy-trinity-of-powershell-cmdlets/
+03:37:06	Dana Epp:	New-Vegetable -Name 'Bacon' -CookingState 'Fried'
+03:37:38	Jim Jones:	Is there a way for me to make an array from a list that is multiline?
+03:38:15	Jim Jones:	$app = @(
+app1
+app2
+app3
+)
+03:38:59	Josh Duffney:	@Jim is that list already stored in a file?
+03:39:10	Jim Jones:	In the file of the script
+03:39:46	Jim Jones:	I'm guessing if I did it with a file it'd be $app = Import-File <myfilepath>
+03:39:47	Dana Epp:	Use semicolors at the end of each line?
+03:40:44	Jim Jones:	No, it's trying to read each line as a cmdlet
+03:41:04	Tyler:	does it have to be multilined?
+03:41:17	Jim Jones:	It would be easier, it's a long list
+03:41:27	Tyler:	can you do$app = @("app1","app2","app3"
+)
+
+03:41:41	Tyler:	use back ticks
+03:41:54	Tyler:	`
+03:42:05	Joe Houghes:	$app = @"
+app1
+app2
+app3
+"@ -split "`n" | % { $_.trim() }
+03:42:15	Joe Houghes:	It's gnarly, but it works
+03:42:43	Tyler:	$app = @(
+app1 `
+app2 `
+app3 `
+)
+
+03:42:59	Tyler:	not sure if that'll work in parenthesis though
+03:43:06	Dana Epp:	WOuldn't you need a comma before each backtick?
+03:43:29	Tyler:	yea, sorry... just re-pasted quickly
+03:43:35	Tyler:	formatting might need a little work
+03:43:42	Joe Houghes:	I add the trim so I can cheat and copy/paste without worrying about extra whitespace
+03:44:02	Tim Warner:	I would place Where-Object and Select-Object as the next most important commands to master after Jeff's three.
+03:44:09	Mark Roloff:	Backticks are the handiwork of Satan. Don't use them. You can linebreak on commas to make the array multiline. 
+03:44:15	Jim Birley:	$array = (get-content -Path .\file.txt).split("`n")
+03:44:44	Brett:	where-obj, undoubtedly
+03:46:13	Josh Duffney:	Splits probably the best method if it’s a string with a common delimiter. Lmk if you have an example @Jim and I’ll take another stab at it
+03:46:41	Tim Warner:	Jeff shows variables starting with $. The $ character itself is called a sigil, and is itself an alias to the $psitem system variable. $psitem translates to "the current object in the pipeline."
+03:46:57	Dana Epp:	Hmmm.... maybe this would be better... 
+
+$apps = @"
+app1
+app2
+app3
+"@ -split "`n" | % { $_.trim() }
+03:47:13	Joe Houghes:	Yep, that's what I use Dana
+03:47:14	BrendanReid:	so many ways to skin a CSV
+03:47:50	Tim Warner:	"Filter Left, Format Right" in PowerShell: https://www.youtube.com/watch?v=-LpsPtbcKR0
+03:48:07	Joe Houghes:	Especially when working with AD
+03:48:08	Tyler:	best advice I ever heard
+03:48:19	Tyler:	saved me loads of waiting
+03:48:25	Joe Houghes:	-Filter * is only acceptable in a lab environment
+03:49:12	Tyler:	and measure-object is a great way to show how much faster things are
+03:49:25	Tim Warner:	@Tyler : Exactly. Why format 1,000 objects if you only need to retrieve 10?
+03:49:25	Tyler:	or measure-command... 
+03:49:56	phil gainley:	\]
+03:50:04	Tyler:	for sure, as noted above, I found this most useful when dealing with AD
+03:50:04	Joe Houghes:	PowerShell 4 was that change to Where-Object
+03:50:08	Tyler:	since it has so much info
+03:50:50	Joe Houghes:	Yes, nothing like seeing the performance impact to a DC when someone runs a query for all objects in a 500k+ user environment...
+03:50:58	Dana Epp:	Except now Microsoft is moving everything to JMESPath, so now even thats changing 
+03:52:32	Josh Duffney:	Using where {} allows you to use more than one operator | where {$_.Name -eq ‘Web1’ -and $_.OSType -match ‘windows’}
+03:53:12	BrendanReid:	@josh Thank you! 
+03:53:21	BrendanReid:	Did not know that about {}
+03:53:38	Josh Duffney:	you can also | where | where but I’m lazy :)
+03:53:48	Tyler:	agreed, good tip. That's what I've used in the past, but seeing Jeff's example made me wonder the difference
+03:54:00	Tyler:	I'm sure that's slower too
+03:54:00	Jim Birley:	let's not forget about the now built-in .where() method
+03:54:11	Josh Duffney:	Oh yes good call out
+03:54:13	Jim Birley:	it can be faster
+03:54:24	Tim Warner:	I would extend on Josh's example by suggesting parentheses for each separate comparison operation.
+03:55:29	BrendanReid:	Is there a good page/article talking about the differences between {} () "", etc?
+03:55:50	Pieter Jan Geutjens:	should you also internally order the comparisons according to the filter left rule?
+03:55:56	Pieter Jan Geutjens:	if you use -and
+03:56:12	Willie Cash:	file:///C:/Users/wcash/Downloads/PSPunctuationWallChart_1_0_4.pdf
+has been helpful for me
+03:56:40	Dana Epp:	Your local file doesn't help us Wlillie ;-)
+03:56:55	Willie Cash:	yeah - duh :)
+03:56:57	Willie Cash:	https://www.red-gate.com/simple-talk/sysadmin/powershell/the-complete-guide-to-powershell-punctuation/
+03:57:07	Dana Epp:	https://www.red-gate.com/simple-talk/wp-content/uploads/2015/09/PSPunctuationWallChart_1_0_4.pdf
+03:57:30	Dana Epp:	Great share though. Thanks for that
+03:57:53	Tyler:	that is a great chart... thanks!
+03:58:16	Dennis B:	cool chart
+03:59:14	Josh Duffney:	So that’s what all these symbols are actually called lol
+04:00:33	Joe Houghes:	Ha
+04:01:13	Joe Houghes:	Nice that they distinguish the literal vs. interpolated here-string though
+04:01:27	Joe Houghes:	I messed that one up a lot
+04:03:41	phil gainley:	did you save it?
+04:03:44	phil gainley:	silly question :-)
+04:03:51	Pieter Jan Geutjens:	Question for Jef: Will powershell “translate” the CSV headers into the Get-Service parameters of the same name?
+04:04:03	Pieter Jan Geutjens:	Jeff*
+04:04:10	Jim Birley:	Was just going to say the same ^
+04:04:27	Linda:	are you going to give us a copy of your comamnds in your txt file?
+04:04:28	Jim Birley:	Parameters have to match headers
+04:05:27	Tyler:	name in the last file was 321
+04:05:27	phil gainley:	i think you did 321 last time?
+04:05:37	BrendanReid:	Type
+04:05:41	BrendanReid:	typo, missed a "
+04:06:20	phil gainley:	add a quote on second line
+04:06:23	Brett:	you got one of em, we're good
+04:06:24	phil gainley:	only have one quote
+04:07:54	Gurvinder Singh:	Get-Lunch | ForALL
+04:08:15	Tyler:	your machien name is wrong there
+04:09:03	Jim Birley:	He had the wrong Bovine, (servers are cattle, not pets) :-)
+04:09:50	Kevin.rosal:	is the session today and tomorrow will be recorded and be available somewhere to revisit?
+04:10:07	Jim Birley:	that was my understanding
+04:10:25	Tim Warner:	{
+
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.showIcons": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.colorTheme": "Cobalt Blue",
+
+    "editor.mouseWheelZoom": true,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "editor.wordWrap": "on",
+    "editor.formatOnType": true,
+    "editor.tabCompletion": "on",
+    "editor.formatOnPaste": true,
+    "editor.wordBasedSuggestions": false,
+    "editor.fontSize": 10,
+
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "afterDelay",
+    "files.defaultLanguage": "Plain Text",
+
+    "terminal.integrated.fontFamily": "Consolas",
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.lineHeight": 1,
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "powershell.powerShellExePath": "C:\\WINDOWS\\System32\\WindowsPowerShell\\
+04:10:42	Tim Warner:	Clipboard fail, there. Apologies. :)
+04:10:52	Tim Warner:	@Kevin: Yes to the recording; it will be available to your user account in the cloudskills portal
+04:11:06	Tim Warner:	At least you can see my VSCode settings! 
+04:11:13	Kevin.rosal:	awesome, thanks for confirming Tim
+04:11:29	phil gainley:	import-clixml does it handle complex objects?
+04:11:36	phil gainley:	like a nested object
+04:12:16	Mark Roloff:	It does.
+04:14:37	phil gainley:	thanks mark!
+04:20:10	Larry Steele:	great info!
+04:20:16	Dana Epp:	Nah... food module made me hungry
+04:20:25	Dana Epp:	Sounds good
+04:20:28	Jason Crichton:	10-4
+04:20:30	BrendanReid:	Learn all the things
+04:20:31	cameron.sibbald:	sounds good
+04:20:31	Larry Steele:	Yes
+04:20:32	Jose Manuel Galarce:	please XD
+04:20:35	Philippe Darveau:	yaaa
+04:20:35	Nick LaVerde:	Set-Lunch -time now
+04:20:36	stephen barry:	I'm hungry!
+04:21:03	Mike Pfeiffer:	Get-Lunch -Force
+04:21:27	Josh Duffney:	Get-Lunch -Force -ErrorAction SilentlyContinue
+04:22:03	Pieter Jan Geutjens:	to be internationally correct: Set-Timezone | Get-Lunch -Force :p
+04:22:04	Dana Epp:	5 after
+04:22:20	stephen barry:	cool thanks!
+04:22:35	Brett:	we see you mike, kill that cam
+04:22:41	Mike Pfeiffer:	Lunch break until 2:05 PM Central
+04:23:03	Brett:	naw man, tryna to help you out
+04:23:09	Mike Pfeiffer:	haha I know jk :)
+04:23:28	Mike Pfeiffer:	Thanks, btw :)
+04:23:58	Brett:	thumbsup>
+04:24:41	Mike Pfeiffer:	gotta admit I feel a sense of loss without emojis in this chat interface
+04:25:53	Tim Warner:	Here's some nice ambient music for you to enjoy during your lunch: https://www.youtube.com/watch?v=5tPF3d0VfBM
+04:37:27	Gijs Kerstens:	Is there a break? I'm trying to rejoin but nothing shows up it seems
+04:37:30	Ted Francis Asuncion:	enjoying lunch right now!
+04:37:52	Pablo Villaronga:	Me too , I am at Dinner 
+04:38:28	Gijs Kerstens:	Okay, so nothing is being presented right now?
+04:38:59	Razvan-Andrei Zoitanu:	correct. break for another 40 mins.
+04:39:06	Mike Pfeiffer:	Lunch break until 2:05 PM Central
+04:39:15	Gijs Kerstens:	Okay, thanks :-)
+04:39:23	Mike Pfeiffer:	Np!
+04:39:26	Gijs Kerstens:	Enjoy dinner
+05:25:11	Dana Epp:	Nope. Record button isn't on
+05:25:14	Jim Birley:	I don't see the red light.
+05:25:31	Tim Warner:	Looks like recording is on in my Zoom instance
+05:25:49	Mike Pfeiffer:	yep, we’re rolling. Everything is on the record now
+05:26:00	Mike Pfeiffer:	Videos will be in the portal by eod friday
+05:26:37	Dana Epp:	Oh... the red light is up on the top left. Ignore the record button in the middle
+05:31:04	Willie Cash:	@mikepf - will there be a transcript and/or will the session times be notated for easier follow up training?
+05:31:23	Joedy Allison:	Thank You
+05:34:06	Josh Duffney:	Amazing pscustomobject blog post from Kevin Marquette https://powershellexplained.com/2016-10-28-powershell-everything-you-wanted-to-know-about-pscustomobject/
+05:34:37	Mark Roloff:	Kevin's hashtable article is also incredible
+05:35:59	Tim Warner:	As many of you know, Azure PowerShell commands can require several parameters. Therefore, what Jeff is presenting now about splatting is especially relevant: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-6
+05:37:11	Tim Warner:	Trivia concerning the origin of the term "hash table": https://softwareengineering.stackexchange.com/questions/108124/why-it-is-called-hash-table-or-hash-function-hash-doesnt-make-any-sense-t
+05:38:10	Gijs Kerstens:	Flabbegasted, never heard of splatting in my Powershell career...awesome
+05:39:50	Gijs Kerstens:	Any insights on when to use arrays and when to use hashes?
+05:40:21	Jeff Brown:	I always forget to use splatting
+05:40:37	Larry Steele:	noooo....not regex! lol :)
+05:40:41	Pieter Jan Geutjens:	@Kevin arrays hold only values, hash tables are key-value pairs
+05:41:08	Tim Warner:	@Gijs: Depends on whether you' have key-value pairs or individual elements, as Pieter said.
+05:41:09	Pieter Jan Geutjens:	so if you want the different items in your set of items to have a different “meaning”,use a hash
+05:41:30	Josh Duffney:	Yes regex :) @larry embrace the darkness
+05:41:34	Willie Cash:	good question
+05:42:08	Gijs Kerstens:	Clear, thanks
+05:42:12	Larry Steele:	right! I stay away from REGEX as much as possible...lol
+05:43:02	Donnie Trumpower:	I remember learning about splatting from Tevor Sullivan on Twitter. Blew my mind, and I try to use it whenever I can now
+05:43:11	Mike Pfeiffer:	Some people, when confronted with a problem, think "I know, I'll use regular expressions." Now they have two problems.
+05:43:23	Mark Roloff:	It really helps to keep your code clean.
+05:43:36	Mark Roloff:	Splatting, not regex. Regex is never clean.
+05:44:10	Dana Epp:	Hey now... some of us had to use sed and awk for years.... regex was our only saving grace
+05:44:16	Tim Warner:	My favorite place to test regex on non-sensitive data: https://rubular.com/
+05:44:39	Dana Epp:	Although I was more a fan of regex in perl myself.
+05:44:50	Gijs Kerstens:	"Regex demystified" said no one ever
+05:45:02	Pieter Jan Geutjens:	I actually spent 2 hours last week trying to get a regex for “select the full word that contains this string” in sed…in the end it still was not quite what I wanted.. settled for “close enough” :/
+05:45:50	Pieter Jan Geutjens:	maybe tells you more about me than about regex, but still
+05:45:51	Joe Houghes:	Ugh, unary
+05:47:04	Brett:	stop sharing for a sec...?
+05:47:08	Brett:	boom
+05:47:26	Dana Epp:	Zoom... super safe lol
+05:47:27	Mike Pfeiffer:	We’ll give Zoom a pass on this one
+05:47:33	Gijs Kerstens:	That's one hell of a 4K webcam you got there
+05:47:36	Mark Roloff:	I think Skype did some nonsense like that
+05:47:39	Mike Pfeiffer:	since we all got connected without issue ;)
+05:47:41	Pieter Jan Geutjens:	what if we all promise to look away?:)
+05:47:44	Brett:	let's see if it affects their NPO...
+05:48:02	Dana Epp:	What, no MS Teams Mike? ;-)
+05:48:20	Brett:	#dangggg
+05:48:34	Zach Petersen:	Have to admit that Zoom has been painless so far. I even used it recently when I (on MS Teams) couldnt get screen sharing to work properly with someone else (running Skype4B)
+05:49:10	Brett:	not sure if citrix supports it yet in terminal, but we digress....
+05:49:14	BrendanReid:	JEFF SEEES ALLLLLL!
+05:49:20	Zach Petersen:	The island life of MS Teams transition
+05:49:29	Gijs Kerstens:	Zoom already has the nice custom background feature which we're still waiting for in Teams
+05:49:32	Mike Pfeiffer:	@dana nope, wanted to make sure you guys could all get on the call today
+05:49:35	Tim Warner:	Jeff is running PowerShell code that turns on your webcams..be careful
+05:49:48	Dennis B:	good choice mike..
+05:49:50	Brett:	10/10
+05:49:50	Mike Pfeiffer:	Haha…just playin…kinda
+05:53:18	Dana Epp:	"bovine320". Does that mean he likes beef jerkey over bacon?
+05:55:56	Pieter Jan Geutjens:	Question: as it seems script blocks are like anonymous functions in Powershell, can I also pass parameters into them?
+05:56:06	Tyler:	what's the difference between += and $arr.add?
+05:56:47	Richard Reukema:	.Add is typically used to add to a collection, as opposed to concationation to  a string ... 
+05:56:47	Mark Roloff:	+= creates a new array with the additional value appended. $arr.add fails since arrays are static
+05:56:51	Jeff Brown:	You'll get an error that the array is of a fixed size
+05:57:03	Gijs Kerstens:	+ basically creates a new array adding the new content. Add adds it to the existing array
+05:57:45	Tyler:	I've never understood that though, why allow for .add, but fail it out due to fixed size... or is .add not supposed to be used?
+05:58:07	Jeff Brown:	https://www.jonathanmedd.net/2014/01/adding-and-removing-items-from-a-powershell-array.html
+05:58:23	Jeff Brown:	You can define it a particular way and use .add()
+05:58:41	Mark Roloff:	@Pieter yes, you can
+05:58:45	Dana Epp:	Because .add() means to add the element to an existing array, which will fail when its not allocated. += creates a new array each time, cloning the original array and adding the new item
+05:59:35	Tyler:	I see, I think I get it now... not sure why that is sooo confusing to me... 
+06:00:24	Brett:	important note their for everyone, remember to start from 0
+06:00:30	Dana Epp:	+= is an expensive operator, because it is cloning the objects over and over. You would use .add() if you can prealloc the array and drop stuff in. But it comes at the cost of not being flexible, usually failing out when the fixed size can't take it
+06:00:39	Brett:	like replacing busted drives in a a SAN ;)
+06:00:43	Brett:	there*
+06:01:07	Gijs Kerstens:	@Pieter, look at "argumentlist"
+06:01:34	Tyler:	ah, ok. so there is a valuable reason to use either method, but .add assumes you already know everythign that will be in the array... 
+06:02:02	Dana Epp:	BTW, when I say expensive we don't care with 4 or 5 strings. But go try that after pulling back several thousand workstations and measure it. It gets ugly quickly.
+06:03:00	Tyler:	completely understand... nothing matters when dealing with a few objects... when dealing with a few thousand, those seconds add up quickly
+06:03:08	Dana Epp:	Yep
+06:03:19	Tyler:	thanks for the info
+06:03:23	Mark Roloff:	If you don't know how big your array needs to be, it's usually better to just use $arr = foreach () {} to populate it. 
+06:04:07	Jim Birley:	Yes, to Mark's comment, try to avoid += with arrays in production code at all costs.
+06:04:12	Dana Epp:	Or get the .Count on the list and allocate from there before iterating
+06:04:32	Tyler:	so the array size always based on count?
+06:04:44	Tyler:	literally just number of items in the array?
+06:06:04	Dana Epp:	Personally if I had a large amount of data I wouldn't use the native array in powershell, and instead invoke the .NET System.Collections.ArrayList
+06:06:28	Tyler:	aahh... yet another array... 
+06:06:33	Tyler:	although I have used that one 
+06:06:36	Trevor Dueck:	Is Swith more effiecient than if, elseif....
+06:06:45	Tyler:	didn't really understand it was different though
+06:07:19	Jim Birley:	ArrayList does allow .Add() b/c it's a different type all together.
+06:07:41	Joedy Allison:	What is the diffence between running a foreach and foreach-object?
+06:07:47	Mark Roloff:	Thought ArrayList was kinda deprecated in favor of generic lists...?
+06:08:10	Tyler:	cool, thanks for all the array info
+06:08:19	Jim Birley:	it is, but it's still there
+06:08:25	Jeff Miles:	@Joedy, no difference, "foreach" is just an alias:
+
+get-alias foreach
+06:09:09	Jim Birley:	There is a difference
+06:09:09	Dana Epp:	This article explains the perf improvements: https://mcpmag.com/articles/2017/09/28/create-arrays-for-performance-in-powershell.aspx
+06:09:21	Mark Roloff:	Well, there's a difference. It can be confusing since foreach is an alias for foreach-object, and it's also a different loop construct.
+06:09:31	Gijs Kerstens:	For  "Switch or Else" I usually count the number of tests I need. If I need more than 5 "elseIfs" I use switches
+06:09:33	Dana Epp:	They say is 1,400% faster across 1,000 items. But check it for yourself.
+06:10:22	Dana Epp:	Don't get distracted by Dana
+06:10:29	Jim Birley:	yep
+06:10:29	Tyler:	:D
+06:10:32	Joe Houghes:	nice
+06:10:34	BrendanReid:	lol
+06:10:41	Dana Epp:	I think I said for small arrays it doesn't matter
+06:11:03	Dana Epp:	But we have thousands of resources in Azure. It matters.
+06:11:19	Tyler:	I do appreciate the info though either way... arrays have been the bane of my scripting at times so I like to hear thoughts on it
+06:11:22	Pieter Jan Geutjens:	but on the other hand, I do remember the start of the session something about “think about doing this for 10000 items” ;)
+06:11:25	Dana Epp:	Cuz we are MVPs. We like these things :)
+06:24:01	Mark Rodgers:	woah.  what was that ghr command?
+06:24:13	Mark Roloff:	Yeah. Was just checking my own system for that lol
+06:24:13	Gijs Kerstens:	Same here, ghr?
+06:24:38	Jim Birley:	Probably an alias he has for a function that uses to measure the last command
+06:24:49	Mark Rodgers:	super useful when determining performance  please share :)
+06:24:56	Joedy Allison:	Thank You
+06:24:57	Mark Roloff:	https://github.com/jdhitsolutions/PSScriptTools
+06:27:09	scot fairbanks:	Question: If you have an object and you want to exclude some values using wildcards, what's the most efficient way to remove those values from the object (ex. $azureresource.tags | select-object * -excludeproperty *az*) is there a more efficient way than using a select with an exclude?
+06:27:14	Joedy Allison:	That helped a lot.
+06:27:40	Joe Fecht:	So my microphone is not working
+06:27:50	Joe Fecht:	Can you go back to the first splatting example
+06:28:18	Joe Fecht:	How does get-service find that service
+06:28:32	Joe Fecht:	I get that
+06:28:37	Sean Alexander:	After running:
+Install-Module PSScriptTools
+
+You can use:
+Get-HistoryRuntime
+
+Which is AMAZING.
+06:28:40	Joe Fecht:	But why is it not showing the bits service
+06:29:09	Joe Fecht:	Got cha
+06:29:15	Joe Fecht:	so RPC is required by BITS
+06:29:23	Joe Fecht:	got it... We're good
+06:29:34	Joe Fecht:	Thank you
+06:29:54	Ariel Sandberg:	the dependencies
+06:30:05	Ariel Sandberg:	thanks Joe i was confused at first also
+06:30:10	Ariel Sandberg:	and thanks Jeff!
+06:30:28	Jim Birley:	[Related to command timing] : I use a custom prompt function in my profile that always displays the runtime of the last command entered in the prompt.
+06:31:39	scot fairbanks:	ok thanks
+06:33:15	Chris Goucher:	Fantastic - thanks!  Good stuff
+06:33:21	phil gainley:	`thanks!
+06:33:30	Kevin.rosal:	thanks Jeff!
+06:33:34	Donald Crowther:	Thanks Jeff, that was super cool
+06:33:37	Pieter Jan Geutjens:	great stuff
+06:33:55	Gijs Kerstens:	Am I correct there's 1 hour left on today's course?
+06:34:03	Mark Roloff:	Good to also hop into Slack/Discord, Twitter, or Reddit for any PS help in the future... People are super happy to lend a hand.
+06:34:09	Joe Fecht:	Thank you Jeff!
+06:34:36	Mike Pfeiffer:	We’re going to go for about an hour and 45 mins to close out the day
+06:39:42	BrendanReid:	Is there a Discord based Powershell community?
+06:42:36	Mark Roloff:	Yep. Can dig up the invite link real quick...
+06:43:40	Mark Roloff:	https://t.co/x61uRkezfi
+06:44:27	Mark Roloff:	There's bridging between Slack, Discord, and IRC, so you don't really miss out on anything by joining one over another.
+06:49:17	Marvier Griffith:	Mike, can you alt+z in your vscode editor so we can see all your code?
+06:49:46	Dana Epp:	That's interesting. I would have used New-AzureRmADApplication
+06:50:01	BrendanReid:	Thx Mark!
+06:50:37	Tim Warner:	Dana, you could go that route, but here we don't need an actual application registration, but only a service principal. There's a 1:many relationship in Azure between app registrations and service principals. It's quite the rabbit hole, as I'm sure you know
+06:51:04	Gijs Kerstens:	It is already possible to configure a key using this method?
+06:51:19	Dana Epp:	Ya. I would have done it to then do a role assignment and RBAC that to the subscription or resource group
+06:51:42	Dana Epp:	Nothing wrong with what he did.
+06:53:02	Zach Petersen:	Are there any articles that discuss primary differences between App Reg v1 and v2 (preview?).. assuming that is how they are still referred to.
+06:53:45	Tim Warner:	@Zach, I've been working with the (Preview) experience. My impression is that it's the same thing (stores the same type of object), but MSFT cleaned up the UI a bit and made it easier to navigate.
+06:54:12	Dana Epp:	Hey @Zach, check out https://docs.microsoft.com/en-us/azure/active-directory/develop/azure-ad-endpoint-comparison as a start. Its a different consent model between ADAL and MSAL
+06:54:14	Tyler:	agreed
+06:54:16	Tim Warner:	I struggle with differentiating the application registration and the service principal. The terminology is super unfortunate and unclear, in my humble opinion: https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals
+06:55:05	Tyler:	app registration is a service principal... enterprise application is the new thing that is somewhat different
+06:55:09	Tim Warner:	@Dana, so would it be correct to say that the App registration v2 model is MSAL only, whereas V1 supports both APIs?
+06:55:11	Dana Epp:	RIght now, a majority of azure services are still using v1 tokens.... so the ADAL route is usually a bit easier to get access to resources with the access token. But it means you have to set your perm grant in advance. MSAL is nice because its dynamic consent as you need it.
+06:56:14	Zach Petersen:	Thanks @Tim and @Dana
+06:56:15	Dana Epp:	Well, the Identity folks SAY you can mint a v1 token with a v2 endpoint. However, right now there is some fragility to that... especially on ARM endpoints. THe _default doesn't always work
+06:56:56	Dana Epp:	MSAL is where things are going. But, most of Azure isn't using it (yet). If you spend most times on the Microsoft Graph, it works well.
+06:57:15	Kevin.rosal:	does Azure have the ability to notify you if someone modifies IAM permissions?
+06:57:36	Dana Epp:	You could use Azure Monitor to track events, and then hook them to alert how you like.
+06:57:58	Zach Petersen:	@dana yeah the Graph is where I started to see this pop up as a need. Was crazy confusing to start.
+06:57:59	Kevin.rosal:	cool, thanks Dana
+06:58:28	Pablo Villaronga:	I used to work with a product called Change Auditor for this 
+06:58:40	Tim Warner:	@Kevin: As Dana mentioned, the Activity Log in Azure tracks so-called "control plane events," of which an RBAC change would qualify. And yes, the alerts are very powerful--you can run code as well as do notification when a particular Activity Log entry happens.
+06:58:43	Pablo Villaronga:	and if you implament PIM will help a lot track changes 
+06:58:57	Zach Petersen:	@Tim - I agreen.. conveying "service princple" and "app reg" etc in laymans terms is nearly impossible without some extreme generaliztion.
+06:59:16	Michal Hoppe:	@Mike - or even turn off file/folder explorer in vS Code
+06:59:46	Zach Petersen:	My typing is terrible today apparently.
+06:59:48	Kevin.rosal:	Good to know, Thanks @Tim
+06:59:53	Gijs Kerstens:	The ` is magic in Powershell for wrapping up ;-)
+07:00:17	Jeff:	Using the backtick is the last ditch resort. Try to avoid it.
+07:00:46	Dana Epp:	Use actiopn-groups to setup your alerts, so you can use common alert patterns across the security events you want to monitor and trigger off of.
+07:00:51	Brian Tower:	@Jeff, does God kill puppies for that, too?
+07:01:28	Zach Petersen:	worse. kills production because you probably messed up the backtick the last time you edited the code. Or someone couldnt read the code easily and edited incorrectly :P
+07:02:09	Jeff:	Backticks are painful for old people like me.
+07:02:17	Marvier Griffith:	I probably wasn't clear. I just wanted to see the text that was going off screen. i think Alt+Z fixes that
+07:02:43	phil gainley:	(Get-AzSubscription)O
+07:02:48	BrendanReid:	 | fl ?
+07:02:49	Brett:	get-azsub___.tenantid
+07:02:53	Joe Fecht:	reduce text size /s
+07:02:58	Joe Houghes:	Get-AzSubscription | Select TenantId
+07:02:58	Jim Birley:	(Get-AzSubscription).TenantId
+07:02:59	phil gainley:	(Get-AzSubscription).TenantId
+
+07:04:30	Mads (Genmab):	Do you have en example where the header name isnt matching the property?
+07:04:39	Jim Birley:	get-process
+07:04:45	Mads (Genmab):	ty
+07:04:57	Gijs Kerstens:	What I don't like about Login-AzureRMAccount / Connect-AzAccount...all your logons are reminded...
+07:05:16	Jeff:	For those of you watching don't forget that we're bumping font sizes for you which truncates things more than they normally would.
+07:06:21	Tyler:	is there a way to enforce that across all endpoints?
+07:06:42	BrendanReid:	^^
+07:06:51	Joe Fecht:	Yep
+07:07:09	Jeff:	Don't forget that using all of this is just the first step. You still need to be smart. Don't walk away from an unlocked keyboard with a running PowerShell Azure session. Sounds like basic stuff but you'd be surprised how easy it is to forget.
+07:07:16	Dana Epp:	@Mike ... would you recommend using "Clear-AzureProfile -Force" to ensure profile is cleaned up before login
+07:08:04	Tyler:	Richard, your mic is on
+07:08:12	Dana Epp:	Richard, mute yerself buddy
+07:08:43	Tyler:	is there a way to put TTLs on that autosave?
+07:09:56	Jeff:	Get-Command -noun azaccount
+07:10:32	Mads (Genmab):	+1 on the TTL question
+07:11:07	Tim Warner:	@Dana It looks like Clear-AzureProfile is an old Azure Service Management command; thus, it shouldn't work in Resource Manager: https://docs.microsoft.com/en-us/powershell/module/servicemanagement/azure/clear-azureprofile?view=azuresmps-4.0.0
+07:12:13	Dana Epp:	Thanks @Tim.
+07:13:42	Dana Epp:	Yep.
+07:13:47	Dana Epp:	Hence Resource Locks
+07:13:48	Freyr:	What about Set-AzContext -SubscriptionId .... when do you need that?
+07:13:57	Dustin Dortch:	Kind of like DiskPart
+07:14:06	Zach Petersen:	Ive been pondering a dynamic ps prompt that will warn me what sub I am in. 
+07:14:20	Joe Fecht:	@Dustin - Don't bring up the nightmares 
+07:14:38	Jim Birley:	Is there something like a default variable, etc. that can tell you which subscription you are in?
+07:14:41	Dana Epp:	We enforce resource locks on all prod deployments. So there is no way to accidentally nuke something without the resource lock blocking and reminding you
+07:14:44	BrendanReid:	fdisk...
+07:15:58	Gijs Kerstens:	@Jim, Get-AzureRmContext?
+07:16:06	Jim Birley:	thanks
+07:16:22	Freyr:	Get-AzContext
+07:16:53	Gijs Kerstens:	Still got the old AzureRM baked in :'-)
+07:17:38	Jeff:	That's why you need to read help.
+07:17:56	Jason Crichton:	I have a hell of a time dealing with the diferent Azure powershell versions, they're just similar enough I can't remember anything.
+07:18:17	Jeff:	You should also understand that sometimes cmdlets are written by people who may not think about how they will be used. 
+07:18:59	Jeff:	Commands can be written from a developer perspective that differ from what an IT Pro might expect.,
+07:19:12	Jim Birley:	Get-AzVM | ? PowerState -eq "off"
+07:19:13	Pieter Jan Geutjens:	Get-AzVM | Where-Object {S_.Status -eq running}
+07:19:17	Jason Crichton:	I've ran into a surprising number of cmdlets with help documents that are functionally useless.
+07:19:25	Zach Petersen:	The property name difference between get-azm and get-azm -status is kind of annoying.. "ProvisioningState" vs "Provisioning".
+07:19:52	Pieter Jan Geutjens:	oopsie
+07:20:29	Jim Birley:	use gm
+
+07:20:34	Jason Crichton:	I've been having fun recently where Azure and powercli have conflicting names
+07:20:44	Joedy Allison:	do a filter
+07:21:09	Jeff Miles:	get-azurermvm -status | select-object name, powerstate | where-object PowerState -ne "VM running"
+
+What i've had to use in the past
+07:21:09	Jeff:	Get-AzureVM -status | Select -first 1 -prop *
+07:21:51	Jim Birley:	Get-AzVM | ? PowerState -like "*running*"
+
+07:22:04	Joedy Allison:	Use the -like "*running*"
+07:23:08	Dustin Dortch:	Are they actually written by people?  And not AutoRest (I think there was a blog post that suggested that)?
+07:23:17	BrendanReid:	developer disconnect
+07:26:27	Dustin Dortch:	https://lnkd.in/eRiY5zc
+07:26:28	Gijs Kerstens:	Never seen the Azure interface that fast
+07:26:40	Dustin Dortch:	They generate the Az modules, according to that post
+07:31:16	Jeff:	Oh just shoot me. 
+07:31:26	Dustin Dortch:	Haha
+07:31:37	Jeff:	PowerShell doesn't care. Make your code easy for you to read.
+07:31:57	Jeff:	You can press enter after a | { ( or ,
+07:32:05	Jeff:	no need for backticks.
+07:32:13	Jeff:	Or learn how to use splatting
+07:32:25	Mark Roloff:	Great deep dive on all the alternatives to backticks.
+07:32:26	Mark Roloff:	https://get-powershellblog.blogspot.com/2017/07/bye-bye-backtick-natural-line.html
+07:32:52	mustafa hasani:	thanks for the link Dustin
+07:33:11	Dustin Dortch:	Splatting is great for Conditions, too.  You have the base hashtable, then you have a Condition that need just one additional or changed parameter...
+07:33:16	Dustin Dortch:	$Hashtable.Add()
+07:33:22	Jeff:	Using the backtick like this is allowed: write `a
+07:33:39	Dustin Dortch:	It is great instead of having Conditions that write out the entire command multiple times
+07:34:20	Pieter Jan Geutjens:	if you splat a hash table into a cmdlet will non-matching keys for that cmdlet just be ignored?
+07:34:25	Pieter Jan Geutjens:	or will it error out?
+07:34:29	Mark Roloff:	Errs out
+07:34:29	Jeff:	All of these things we've been covering can also be nested and often are. You can unroll them in one line with the . notation
+07:34:47	Jeff:	Pieter - try it and find out!
+07:35:04	Pieter Jan Geutjens:	I was actually just typing that I could really test that :)
+07:35:39	Jeff:	I get this all the time in may classes - "What would happen if I <fill in the blank>?"
+07:35:47	Jeff:	Try it and see!
+07:36:16	Jeff:	Obvioiusly not in production.
+07:36:47	Dustin Dortch:	Be “The Most Interesting Man...” and do your testing in production
+07:37:21	Pieter Jan Geutjens:	so now I know it errors out ;-)
+07:39:26	Jeff:	This is a good way to get a sortable date: get-date -f u
+07:39:36	phil gainley:	will this all resources across subscriptions and resource groups?
+07:39:55	Reggie Richard:	Why did the tag get overwritten?
+07:39:57	Michal Hoppe:	5 min break
+07:40:04	Michal Hoppe:	?
+07:40:05	Mark Roloff:	One subscription at a time, Phil.
+07:40:06	Cam Sibbald:	great stuff
+07:40:08	Reggie Richard:	Updated was there and then it was changed to Dept
+07:40:21	phil gainley:	thanks @mark
+07:40:24	Gijs Kerstens:	I have to leave, 23PM and up in 4 hours
+07:40:27	Gijs Kerstens:	Thanks so far :-)
+07:40:29	Kevin.rosal:	great content, thanks Mike
+07:40:33	Donald Crowther:	Thanks, that was concentrated but phenomenally useful
+07:40:40	Sean Alexander:	I think the question of why the Tag got over written is a good one.  :)
+07:40:45	Donald Crowther:	Do you have time for keyvault?
+07:40:48	Marvier Griffith:	really looking forward to the next bit!
+07:41:04	Jeff:	I think some of these things will be covered tomorrow
+07:41:36	Donald Crowther:	Thanks
+07:41:49	phil gainley:	when is todays video's goings up on this platform? its going to be 1030pm here and was wondering if i can watch the rest in the morning
+07:41:56	Reggie Richard:	Why did the tag get overwritten instead of appended to? 
+07:42:14	Brian Tower:	@reggie, Tags are ephemeral
+07:42:26	Brian Tower:	if you want to retain existing tags, you have to write them back
+07:42:32	Brian Tower:	hope that makes sense
+07:42:39	Reggie Richard:	thanks Brian
+07:43:02	Mark Rodgers:	how are the new az module and azure cli related? do they use common classes?
+07:43:09	Brian Tower:	IMO, Tags are a great idea poorly implemented (and no, AWS isn't any better)
+07:43:30	Dana Epp:	az cli is very different.
+07:43:31	Dustin Dortch:	They aren't really
+07:43:35	Dustin Dortch:	az cli is python
+07:43:39	Dustin Dortch:	isn't it?
+07:43:46	Mark Rodgers:	I really like azure cli for basic management, of course, not scripting
+07:43:46	Dustin Dortch:	or just some other interface that is command line
+07:43:55	Jeff:	Oh it's cocktail time. Love working from home.
+07:43:57	Dana Epp:	I like it better myself. But it is different. Written in python. Will run in Powershell window.
+07:44:25	Pieter Jan Geutjens:	it’s a lot less verbose, I do like that
+07:44:35	Dana Epp:	There are times I have come across items in the cli where I had to fall back to Azure PowerShell.
+07:44:47	Mark Rodgers:	I’ve noticed that to @Data
+07:44:50	Mark Rodgers:	@Dana
+07:44:52	Dana Epp:	ie SQL server threat detection. Doesn't exist in az cli. Does in PowerShell
+07:45:17	Dana Epp:	SQL database threat detection exists... but not sql server. Really weird.
+07:45:21	Mark Rodgers:	kind-of why I was wondering if they used common classes
+07:45:36	Pieter Jan Geutjens:	Out of curiosity: those of you spending a lot of time doing cloud-related stuff, do you find yourselves doing pretty much everything from the shell, all the time, as opposed to portal?
+07:45:53	Mark Rodgers:	1/2 and 1/2
+07:45:58	Jeff:	A lot of Azure stuff is a moving target. Microsoft is constantly updating. Help should be your friend.
+07:45:59	Reggie Richard:	ready
+07:46:00	Pieter Jan Geutjens:	go go go
+07:46:01	Kevin.rosal:	ready
+07:46:02	James Petty:	lets do it
+07:46:02	bryon howe:	ONce more into the breach
+07:46:06	Jose Manuel Galarce:	yes
+07:46:20	Mark Rodgers:	azure automation FTW!!
+07:46:21	Dana Epp:	The portal blade UI is very inefficient. I am a big fan of IaC, which is why I do almost everything in ARM templates and az cli / PowerShell
+07:46:53	Dana Epp:	And the portal doesn't always show and edit all the data. You pretty much can in shell 
+07:47:36	Pieter Jan Geutjens:	I have some small projects coming up involving could and I was thinking I would challenge myself to go portal-free for like a day, or 2
+07:47:49	Pieter Jan Geutjens:	involving cloud*
+07:49:04	phil gainley:	classic account?
+07:54:22	Brian Tower:	can we not just install/import the entire AZ module?
+07:54:51	Jim Birley:	Can the importing of these modules be done in the shell?
+07:54:57	Kevin.rosal:	^
+07:56:00	Trevor Dueck:	What is the process for updating modules in azure automation
+07:56:28	phil gainley:	you can do a script to update
+07:56:34	phil gainley:	you can also install via arm templates
+07:56:59	Trevor Dueck:	ok, thanks
+07:58:01	phil gainley:	http://www.gi-architects.co.uk/2016/09/update-azure-automation-ps-modules-at-once/
+07:58:03	phil gainley:	https://github.com/azureautomation/runbooks/blob/master/Utility/ARM/Update-ModulesInAutomationToLatestVersion.ps1
+07:59:15	Jim Birley:	lot's O' back ticks
+07:59:27	Jim Birley:	:-(
+07:59:44	Jeff:	Splatting would be better naturally.
+07:59:51	Jim Birley:	Agreed
+08:00:01	Freyr:	Does anyone know when MS will start having Az. modules by default being used and already imported when create-ing a runbook?
+08:00:28	Jeff:	Don't assume that a code sample from Microsoft is necessarily "good" PowerShell.
+08:00:36	Jim Birley:	Agrred
+08:00:41	Jim Birley:	*Agreed*
+08:00:42	phil gainley:	haha true
+08:01:28	Jim Birley:	To be treated just like any other random blog post's code.
+08:02:10	Pieter Jan Geutjens:	not even the ones in the Azure GitHub repo?:s
+08:03:31	Jim Birley:	I treat *using* known good code vs. looking at the source code for reference as two seperate things.
+08:03:56	Dana Epp:	What... you don't just copy & paste from StackOverflow?
+08:04:05	Jim Birley:	LMAO
+08:04:38	Dana Epp:	Sorry.... IT crowd.... ServerFault
+08:04:54	Jim Birley:	No, I use StackOverflow
+
+08:05:29	Jeff:	Called a substriung
+08:05:31	Jeff:	substring
+08:06:21	Jeff:	god I'm tired - subexpression
+08:07:23	Dana Epp:	I'd be careful on that. Storage disk names can only be up to 24 chars. I have been bitten a few times by that.... especially when someone decides to use a naming convention with gawd aweful pattern
+08:07:30	Larry Steele:	can you touch on when to use the $using statement when referencing parameters/variables
+08:08:04	Dana Epp:	Use the table at https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions to make sure you don't blow up on naming conventions
+08:08:20	Jeff:	The $using prefix, like $using:name, is used in remoting to use a locally defined variable remotely.
+08:09:21	Jeff:	$name ="bits"
+Invoke-command -scriptblock { get-service $using:name } -computername $servers
+08:09:41	phil gainley:	ah.. value passing into a script block
+08:09:51	phil gainley:	thanks
+08:09:58	Larry Steele:	thanks, i see that being used in a lot of automation account runbooks
+08:09:58	Jim Birley:	@Jeff, what about PS Jobs also?
+08:10:29	Jeff:	What about jobs? I think that will also work because jobs using the remoting infrastructure.
+08:11:28	Jeff:	PS C:\> $name = "bits"
+PS C:\> start-job { get-service $using:name}
+08:11:29	Jim Birley:	Yes. Thanks.
+08:12:03	Jeff:	Or you can define a param block in the scriptblock and pass arguments.
+08:12:09	phil gainley:	automation vs scheduler, which one to choose?
+08:12:16	phil gainley:	@jeff
+08:12:50	Jeff:	I use a ton of scheduled jobs locally. I personally don't have much need for Azure since I work for myself.
+08:13:25	phil gainley:	thanks @jeff
+08:13:31	Jim Birley:	#PSWhiskey
+08:13:40	Jeff:	If you think about it scheduled jobs are just running your automation at a given time.
+08:14:01	Willie Cash:	Can it execute automation against a local AD? What about domain joined devices?
+08:14:16	Jeff:	If you can type it at a console you can script it and automate it.
+08:14:24	Willie Cash:	ty
+08:14:26	Jeff Miles:	all good with longer.
+08:14:27	Dana Epp:	Keep going
+08:14:28	greg white:	yes longer
+08:14:30	Reggie Richard:	keep going
+08:14:31	Michal Hoppe:	Go for it.  Keep on going
+08:14:32	Kevin.rosal:	keep going
+08:14:32	Saif Sheikh:	awesome, keep going
+08:14:33	Willie Cash:	longer is great
+08:14:34	Pieter Jan Geutjens:	sure
+08:14:36	Hani Naser:	yes
+08:14:36	Paul Byrne:	Keep going
+08:14:37	Jason.schmidt@wginc.com:	keep going
+08:14:37	Don Lambert:	keep going
+08:14:39	BrendanReid:	keep recording
+08:14:39	Marvier Griffith:	go for it dude!
+08:14:42	BrendanReid:	then everyone wins
+08:14:42	Chris Goucher:	good to go
+08:14:44	Jim Birley:	#PSWhiskey
+
+08:14:48	michael.groenier:	can always watch video later
+08:14:53	Pieter Jan Geutjens:	to me it’s tomorrow in 60 seconds anyway :P
+08:15:07	Sean Alexander:	What kind of Scotch? ;)
+08:15:08	Chris Goucher:	lol
+08:16:10	Jim Birley:	My guess on the scotch = Monkey Shoulder
+08:16:40	Jeff:	Finishing up my bottle of Macallan 12.
+08:17:40	Jim Birley:	"Don't drink and code.  It can save a server (or several)."
+08:17:46	Dana Epp:	You might find this help you select which is better for your needs: https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs
+08:20:39	Dana Epp:	BTW, here is an issue in Github explaining Azure Functions written in Powershell and Azure Automation : https://github.com/Azure/Azure-Functions/issues/193
+08:21:52	Dana Epp:	Scale up or scale out?
+08:22:24	Willie Cash:	Thank you for that link @Dana - helpful
+08:22:45	Joe Houghes:	Read the docs, a lot of it is there in th full online documentation
+08:23:06	Jeff:	You can also use the forums at PowerShell.org
+08:23:33	Dana Epp:	is this through Azure SQL Database or SQL on your own VMs?
+08:23:40	Jeff:	Believe it not, sometimes the Microsoft documentation is wrong or misleading.
+08:23:49	Dana Epp:	ie: Can you leverage elastic pools for your SQL usage?
+08:24:08	Jeff:	The cadence is fast now so that commands can get updated faster than documentation.
+08:24:44	Dana Epp:	@Gurvinder : Would this be helpful? https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-scale-introduction
+08:24:50	Gurvinder Singh:	Q was for SQL Azure (PaaS) databasee 
+08:25:23	Dana Epp:	Ya. Start here then : https://docs.microsoft.com/en-us/azure/sql-database/sql-database-scale-resources
+08:25:49	Jeff:	$vms becomes a custom object
+08:25:55	Gurvinder Singh:	I was wondering rather asking google , I can figure out from Az commands what input are needed 
+08:26:13	Gurvinder Singh:	Thanks !
+08:26:49	Dana Epp:	You have to decide if you want to scale out vs scale up. Then you can decide on how that will be configured. There are cmdlets to handle the sql. ie: https://docs.microsoft.com/en-us/azure/sql-database/scripts/sql-database-monitor-and-scale-database-powershell 
+08:26:58	Jim Birley:	Good point Jeff, that's why he can't simply pipe the $vms into the Stop-AzVM cmdlet.
+08:27:54	Jim Birley:	Instead, he has to reference the properties of the object to pass the cmdlet's parameters.
+08:28:03	bryon howe:	so much info. are the chat links being captured? 
+08:28:44	Joedy Allison:	Yes., we don't 
+08:30:22	Jeff:	Mike might have been able to pipe $vms to Stop-AZVM becasuse -Name and -resourceGroupname take pipeline input by property name.
+08:30:49	Jeff:	At least according to the help on my computer.
+08:30:57	Jim Birley:	yes, true
+08:31:03	Pablo Villaronga:	I will Wrap up tomorrow
+08:31:14	Pablo Villaronga:	cheers ! See you tomorrow
+08:31:30	Jose Manuel Galarce:	see you tomorrow! thanks!
+08:31:41	Jeff:	Thanks for hanging out 
+08:32:20	Michal Hoppe:	I hope that the chat will be also captured!  So much good info.
+08:32:57	Jeff:	Zoom is Mike's thing so I don't know about chat. I hope so as well.
+08:32:58	Kevin.rosal:	agree
+08:33:34	Dana Epp:	Right click the window.. "Select All" and throw it in a file?
+08:33:34	Jeff:	You each have an option to save chat under the More button if you want to be sure.
+08:33:46	Dana Epp:	Or that
+08:33:56	Jeff:	belt and suspenders!
+08:34:34	Josh Duffney:	Great content and conversations, see you all tomorrow! :)
+08:34:48	Michal Hoppe:	I am using Chrome.  Don't seem to have that option.
+08:35:07	Kevin.rosal:	i got you Michal ;)
+08:35:16	Mark Rodgers:	thank you!
+08:35:16	bryon howe:	had to log off a couple of times, most are gone
+08:35:19	Dana Epp:	He's out of scotch
+08:35:23	Trevor Dueck:	Thanks for all the great content today.
+08:35:25	Stephane Tardif:	no credential required?
+08:35:40	Dana Epp:	No, that URI has a token for the auth in the webhook
+08:35:59	Dana Epp:	Which is why security people like me hate that.
+08:36:16	Donald Crowther:	Thank you, that was good fun. 
+08:37:22	Jim Katoe:	Do you use webhooks Dana?
+08:37:31	Kevin.rosal:	great content today!
+08:37:32	Saif Sheikh:	no it was beneficial
+08:37:49	Jim Katoe:	do you mitigate the security problem with another method?
+08:37:56	Dana Epp:	Not usually. We would push it into a storage queue and use event driven execution
+08:38:02	Freyr:	Thanks from Iceland team see you tomorrow
+08:38:08	Stephane Tardif:	great stuff!  thank you
+08:38:19	Dana Epp:	And then if we need a web hook we would use an http trigger in an Azure function which uses access tokens or function key tokens
+08:38:26	bryon howe:	Mike, awesome as always .. gives me some homework ...
+08:38:37	Dana Epp:	That way the tokens are not in the URL... since load balancers and netflow will pick up those URLs.
+08:38:48	Dana Epp:	And the tokens are short lived then
+08:39:29	Jim Birley:	Will we be covering CI/CD with Azure DevOps?
+08:39:36	Dana Epp:	SO http trigger in Azure function -> storage queue -> events triggered -> automation execution
+08:39:40	Pieter Jan Geutjens:	maybe more a question for tomorrow, but how do you see the future of azure automation/dsc given new tools coming up like terraform/pulumi
+08:40:38	Jim Katoe:	thx
+08:40:53	Mike Pfeiffer:	np…Pieter I’ll answer after this
+08:41:20	Pieter Jan Geutjens:	tnx
+08:41:53	Stephane Tardif:	set-executionpolicy allsigned only allows local perhaps
+08:42:31	Jeffery Hayes:	I've had something similar with Windows 10. Where an Mapped UNC path instead of H:\ I used \\domain.org\folderpath\script.ps1 
+08:44:58	Pieter Jan Geutjens:	;-)
+08:45:56	Pieter Jan Geutjens:	great anwer, thanks!
+08:46:07	Mike Pfeiffer:	:)
+08:46:59	Jeff:	You may need to configure your desktop to recognize the UNC as intranet source
+08:47:03	Saif Sheikh:	will that cover key vault?
+08:47:09	Hani Naser:	would puppet be the next DSC ?
+08:47:20	Stephane Tardif:	they are buying ansible or puppet?
+08:47:30	Pieter Jan Geutjens:	I used a lot of DSC in the past couple years, but nowadays ansible looks like it might cover a lot cross platform..
+08:47:33	Zach Petersen:	i'd pay for a workshop on Azure DevOps pipelines. :)
+08:48:06	Mark Rodgers:	Will be interested to see how deep we can get into devops pipelines..
+08:48:08	Pieter Jan Geutjens:	so would I :)
+08:48:10	Cam Sibbald:	same here
+08:48:12	greg white:	I would too
+08:48:13	Stephane Tardif:	same
+08:48:15	Hani Naser:	me too 
+08:48:17	Jeff Miles:	yup
+08:48:17	Saif Sheikh:	same
+08:48:17	Volker:	Oh yeah
+08:48:21	Kevin.rosal:	same
+08:48:21	Hani Naser:	DevOps
+08:48:21	Mark Rodgers:	yes
+08:48:23	Saif Sheikh:	yes
+08:48:24	greg white:	either
+08:48:26	Cam Sibbald:	both
+08:48:31	Deshkanth Yathamshetti:	yeah
+08:48:31	Mark Roloff:	Agreed. If this workshop is an indication of the quality, absolutely.
+08:48:32	bryon howe:	not sure what it is?? new to this
+08:48:38	Dana Epp:	Thanks for the work today guys. Great job.
+08:48:57	bryon howe:	Oh .. OK .. we cool ...
+08:49:05	Dana Epp:	https://dev.azure.com/
+08:49:25	Jeff Miles:	We're using DSC today and working through the question (in light of a pipeline) whether to use DSC in the image creation, or post deployment after infrastructure as code has been utilized.
+08:49:31	Dana Epp:	Where does the white go when snow melts?
+08:49:33	Willie Cash:	VS code or PowerShell ISE?
+08:49:34	Pieter Jan Geutjens:	would love to, but need to get up for work in 5 hours :)
+08:49:41	Reggie Richard:	I think this is a simple question, but I haven't been able to find the answer. When creating a new VM in Azure, how do you add it to your domain?
+
+08:50:05	bryon howe:	looked at AWS .. think I am AZURE bound .. being a MS guy ...
+08:50:30	Reggie Richard:	sure thing
+08:50:31	Philippe Darveau:	is there any good reason to chose google cloud platform instead of azure or AWS?
+08:50:50	Jim Katoe:	DSC is an option for domain join
+08:51:01	Reggie Richard:	can Azure AD handle the domain membership OR will we always need windows AD servers?
+08:51:17	Jim Katoe:	AAD had a join but it is different
+08:51:21	Jim Katoe:	has*
+08:51:29	Kevin.rosal:	Any good tips/resource for a new guy starting as a cloud sysadmin with azure
+08:51:32	Mark Rodgers:	seems like all sorts for AWS out there, going Azure myself and have been since ‘14
+08:51:42	Saif Sheikh:	anthos
+08:52:32	Dana Epp:	https://github.com/Azure/azure-quickstart-templates/tree/master/201-vm-domain-join-existing
+08:52:37	Zach Petersen:	I have been seeing a lot of people combining different environments - dev, (preprod), prod - in the same Azure subscription. What are your thoughts on that and the general idea of using subs to separate concerns/environments and are there any good articles in support of a "best practice"?
+08:53:34	Kevin.rosal:	been in GCP for a while
+08:54:01	Dana Epp:	Also consider the Azure Architecture Center
+08:54:05	Dana Epp:	https://docs.microsoft.com/en-us/azure/architecture/
+08:54:14	Jeff Brown:	+1 for Microsoft Learn, will help with the performance labs if you take the cert exams
+08:54:28	Mark Roloff:	@Zach  https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/appendix/azure-scaffold
+08:54:44	Mark Roloff:	Essentially, separate subs for dev/prod
+08:55:14	Zach Petersen:	@mark oh awesome - knew I'd seen this somewhere. Thank you!
+08:55:24	Gurvinder Singh:	Agree @Jeff
+08:55:30	Mark Rodgers:	totally agree @Jeff
+08:55:45	Mark Rodgers:	too many devs just want to know what buttons to click
+08:56:08	bryon howe:	jeff... good scripting tool for powershell?
+08:56:21	Pieter Jan Geutjens:	Since I know you are a big proponent of “getting out there”, do things like write a blog, any resources on how to write a decent piece, with good structure?
+08:56:41	Zach Petersen:	Yeah the link that @mark provided is exactly what I was looking for
+08:56:45	Dana Epp:	I have a bunch of posts on www.danepp.com with links for where to start for the security side of Azure.
+08:56:53	Zach Petersen:	i cant believe how hard it is to get people to buy into that kind of thing...
+08:57:19	Willie Cash:	@dana - got a site cant be reached note
+08:57:29	Dana Epp:	Ya, I just noticed that.
+08:57:37	Jim Katoe:	https://www.danaepp.com/
+08:57:39	Jim Katoe:	typo
+08:58:02	Willie Cash:	thank you @Jeff - had that question earlier
+08:58:12	bryon howe:	Mike, can you go over the Prescriptive subscription governance -- Jeff- yup we are old ...lol
+08:58:28	Willie Cash:	https://www.danaepp.com/
+08:59:53	bryon howe:	awesome, thanks guys ... sun is stillup in AZ ...
+09:00:26	Volker:	Thanks for all the information and staying to answer all these questions guys.
+09:00:27	Hani Naser:	Awsome
+09:00:29	Cam Sibbald:	Thanks guys, great day
+09:00:31	Dana Epp:	Thanks guys.
+09:00:35	Pieter Jan Geutjens:	awesome stuff, see you tomorrow!
+09:00:46	Gurvinder Singh:	This is great session - Thank you Mike, Jeff, TIM  ... tomorow is going to be double awesome 
+09:00:48	Willie Cash:	will you guys be at the PowerShell + DevOps Summit?
+09:00:53	Kevin.rosal:	great session, see you tomorrow!
+09:00:54	Jim Birley:	Thanks all!
+09:00:55	Deshkanth Yathamshetti:	Thank you Guys
+09:00:57	greg white:	Thanks Guys!
+09:01:00	Frank Gallo:	Great stuff today; looking forward to tomorrow’s session.
+09:01:05	Zach Petersen:	Thanks everyone! Thanks Mike, Jeff, Tim, Mark Roloff, Dana
+09:01:31	Willie Cash:	great - thank you and thank you all for today
+09:01:32	Jim Birley:	See you at the MArriot!!
+09:01:32	Marvier Griffith:	cheers guys. looking forward to tomorrow. my head if full!
+09:01:38	Willie Cash:	mcallen 12 right?
+09:01:40	bryon howe:	Jason -- tell him he looks like Kojak .. he will know who it is from 
+09:02:00	Jeff Miles:	Thank you!
+09:02:03	Jim Katoe:	thx
+09:02:05	Jim Katoe:	great job
+09:02:09	Frank Gallo:	Thanks

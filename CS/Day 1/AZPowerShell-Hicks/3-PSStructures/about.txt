@@ -1,0 +1,1 @@
+Whether you are working with PowerShell interactively in a console or you have started writing simple PowerShell scripts, there are some common PowerShell structures and operators that you need to understand. Working with arrays, hashtables, and switches is the foundation of your PowerShell expertise.

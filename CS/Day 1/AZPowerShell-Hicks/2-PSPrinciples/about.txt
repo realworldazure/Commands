@@ -1,0 +1,1 @@
+The journey towards mastering PowerShell has to begin with basic principals and concepts. In this session, we'll cover the essential concepts of working with the help system, understanding how the PowerShell pipeline works, how to filter and work with object output, and sort results returned from commands.

@@ -1,0 +1,6 @@
+"name","computername","foo"
+"bits","srv1",123
+"bits","srv2",234
+"winrm","srv1",333
+"bits","bovine321",222
+"dns","dom1",4444

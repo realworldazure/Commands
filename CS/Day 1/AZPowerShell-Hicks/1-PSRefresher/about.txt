@@ -1,0 +1,1 @@
+Even if you have a basic understanding of PowerShell fundamentals, we'll start things off and set a common baseline. This first session will be a brief introduction that is intended to be a crash-course or refresher on your PowerShell skills.

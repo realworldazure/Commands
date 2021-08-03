@@ -1,0 +1,3 @@
+https://github.com/jdhitsolutions/PSTweetChat
+https://github.com/jdhitsolutions/PowerShellScriptingTraps
+https://github.com/jdhitsolutions/PSConfAsia-2018/tree/master/SecureScripting

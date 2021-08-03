@@ -1,0 +1,42 @@
+[
+    {
+        "MachineName":  "srv1",
+        "Name":  "bits",
+        "Status":  1,
+        "Checked":  {
+                        "value":  "\/Date(1555596891546)\/",
+                        "DisplayHint":  2,
+                        "DateTime":  "Thursday, April 18, 2019 10:14:51 AM"
+                    }
+    },
+    {
+        "MachineName":  "srv2",
+        "Name":  "bits",
+        "Status":  1,
+        "Checked":  {
+                        "value":  "\/Date(1555596891548)\/",
+                        "DisplayHint":  2,
+                        "DateTime":  "Thursday, April 18, 2019 10:14:51 AM"
+                    }
+    },
+    {
+        "MachineName":  "srv1",
+        "Name":  "winrm",
+        "Status":  4,
+        "Checked":  {
+                        "value":  "\/Date(1555596891550)\/",
+                        "DisplayHint":  2,
+                        "DateTime":  "Thursday, April 18, 2019 10:14:51 AM"
+                    }
+    },
+    {
+        "MachineName":  "dom1",
+        "Name":  "dns",
+        "Status":  4,
+        "Checked":  {
+                        "value":  "\/Date(1555596891565)\/",
+                        "DisplayHint":  2,
+                        "DateTime":  "Thursday, April 18, 2019 10:14:51 AM"
+                    }
+    }
+]

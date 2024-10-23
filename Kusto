@@ -12,3 +12,14 @@ Resources
 | where "{nicWithPrivateEndpoints}" !has id
 | where properties !has 'virtualmachine'
 | project id, resourceGroup, location, subscriptionId
+
+Resources
+| where type has "microsoft.network/publicIPAddresses"
+| extend ipAllocationMethod = tostring(properties.publicIPAllocationMethod)
+| where properties.ipConfiguration == ""  // No associated IP configuration
+| project id, ipAllocationMethod, resourceGroup, location, subscriptionId
+
+Resources
+| where type has "microsoft.network/loadBalancers"
+| where isempty(properties.backendAddressPools) and isempty(properties.frontendIPConfigurations)  // No backend pools or front-end configurations
+| project id, resourceGroup, location, subscriptionId

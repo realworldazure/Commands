@@ -23,3 +23,10 @@ Resources
 | where type has "microsoft.network/loadBalancers"
 | where isempty(properties.backendAddressPools) and isempty(properties.frontendIPConfigurations)  // No backend pools or front-end configurations
 | project id, resourceGroup, location, subscriptionId
+
+Resources
+| where type has "microsoft.web/serverfarms"
+| extend hostingApps = tostring(properties.numberOfSites)
+| where hostingApps == "0"  // No apps running on the plan
+| project id, resourceGroup, location, subscriptionId
+

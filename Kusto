@@ -30,3 +30,36 @@ Resources
 | where hostingApps == "0"  // No apps running on the plan
 | project id, resourceGroup, location, subscriptionId
 
+Resources
+| where type has "microsoft.compute/virtualMachines"
+| join kind=inner (
+    Perf
+    | where counterName == "Percentage CPU"
+    | summarize avgUsage = avg(CounterValue) by resourceId
+    | where avgUsage < 5  // VMs with low CPU usage (adjust threshold as needed)
+) on $left.id == $right.resourceId
+| project id, resourceGroup, location, subscriptionId, avgUsage
+
+Resources
+| where type has "microsoft.network/networkSecurityGroups"
+| where isempty(properties.networkInterfaces) and isempty(properties.subnets)  // Not associated with any NIC or subnet
+| project id, resourceGroup, location, subscriptionId
+
+Resources
+| where type has "microsoft.network/virtualNetworks"
+| where isempty(properties.subnets) or isempty(properties.virtualNetworkPeerings)  // No subnets or peerings
+| project id, resourceGroup, location, subscriptionId
+
+Resources
+| where type has "microsoft.network/expressRouteCircuits"
+| where isempty(properties.authorizations) and isempty(properties.peerings)  // No peerings or authorizations
+| project id, resourceGroup, location, subscriptionId
+
+ResourceContainers
+| where type == "microsoft.resources/subscriptions/resourceGroups"
+| join kind=leftanti (
+    Resources
+    | summarize by resourceGroup, subscriptionId
+) on resourceGroup, subscriptionId
+| project id, resourceGroup, subscriptionId
+

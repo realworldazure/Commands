@@ -37,7 +37,7 @@ Resources
 | where hostingApps == "0"  // No apps running on the plan
 | project id, resourceGroup, location, subscriptionId
 
-
+//
 Resources
 | where type has "microsoft.compute/virtualMachines"
 | join kind=inner (

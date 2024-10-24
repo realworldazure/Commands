@@ -2,7 +2,7 @@ TIPS
 In Azure Resource Graph explorer, make sure you've got the scope set correctly. It defaults to Management Groups. Subscriptions is appropriate.
 Run '.show tables' to see what tables 
 
-Orphaned Disks:
+//Orphaned Disks:
 Resources
 | where type has "microsoft.compute/disks"
 | extend diskState = tostring(properties.diskState)
@@ -10,32 +10,33 @@ Resources
 or diskState == 'Unattached'
 | project id, diskState, resourceGroup, location, subscriptionId
 
-Orphaned NICs:
+//Orphaned NICs:
 Resources
 | where type has "microsoft.network/networkinterfaces"
 | where "{nicWithPrivateEndpoints}" !has id
 | where properties !has 'virtualmachine'
 | project id, resourceGroup, location, subscriptionId
 
-Orphaned publicIpAddresses
+//Orphaned publicIpAddresses:
 Resources
 | where type has "microsoft.network/publicIPAddresses"
 | extend ipAllocationMethod = tostring(properties.publicIPAllocationMethod)
 | where properties.ipConfiguration == ""  // No associated IP configuration
 | project id, ipAllocationMethod, resourceGroup, location, subscriptionId
 
-Orphaned loadbalancers
+//Orphaned loadbalancers:
 Resources
 | where type has "microsoft.network/loadBalancers"
 | where isempty(properties.backendAddressPools) and isempty(properties.frontendIPConfigurations)  // No backend pools or front-end configurations
 | project id, resourceGroup, location, subscriptionId
 
-Orphaned WebServerFarms (App Service Plan)
+//Orphaned WebServerFarms (App Service Plans):
 Resources
 | where type has "microsoft.web/serverfarms"
 | extend hostingApps = tostring(properties.numberOfSites)
 | where hostingApps == "0"  // No apps running on the plan
 | project id, resourceGroup, location, subscriptionId
+
 
 Resources
 | where type has "microsoft.compute/virtualMachines"
@@ -70,7 +71,7 @@ ResourceContainers
 ) on resourceGroup, subscriptionId
 | project id, resourceGroup, subscriptionId
 
-What extensions are installed on your VM:
+//What extensions are installed on your VM:
 Resources
 | where type == 'microsoft.compute/virtualmachines'
 | extend

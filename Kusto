@@ -1,3 +1,7 @@
+TIPS
+In Azure Resource Graph explorer, make sure you've got the scope set correctly. It defaults to Management Groups. Subscriptions is appropriate.
+Run '.show tables' to see what tables 
+
 Orphaned Disks:
 Resources
 | where type has "microsoft.compute/disks"
@@ -13,17 +17,20 @@ Resources
 | where properties !has 'virtualmachine'
 | project id, resourceGroup, location, subscriptionId
 
+Orphaned publicIpAddresses
 Resources
 | where type has "microsoft.network/publicIPAddresses"
 | extend ipAllocationMethod = tostring(properties.publicIPAllocationMethod)
 | where properties.ipConfiguration == ""  // No associated IP configuration
 | project id, ipAllocationMethod, resourceGroup, location, subscriptionId
 
+Orphaned loadbalancers
 Resources
 | where type has "microsoft.network/loadBalancers"
 | where isempty(properties.backendAddressPools) and isempty(properties.frontendIPConfigurations)  // No backend pools or front-end configurations
 | project id, resourceGroup, location, subscriptionId
 
+Orphaned WebServerFarms (App Service Plan)
 Resources
 | where type has "microsoft.web/serverfarms"
 | extend hostingApps = tostring(properties.numberOfSites)
@@ -63,3 +70,20 @@ ResourceContainers
 ) on resourceGroup, subscriptionId
 | project id, resourceGroup, subscriptionId
 
+What extensions are installed on your VM:
+Resources
+| where type == 'microsoft.compute/virtualmachines'
+| extend
+  JoinID = toupper(id),
+  OSName = tostring(properties.osProfile.computerName),
+  OSType = tostring(properties.storageProfile.osDisk.osType),
+  VMSize = tostring(properties.hardwareProfile.vmSize)
+| join kind=leftouter(
+  Resources
+  | where type == 'microsoft.compute/virtualmachines/extensions'
+  | extend
+    VMId = toupper(substring(id, 0, indexof(id, '/extensions'))),
+    ExtensionName = name
+) on $left.JoinID == $right.VMId
+| summarize Extensions = make_list(ExtensionName) by id, OSName, OSType, VMSize
+| order by tolower(OSName) asc

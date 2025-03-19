@@ -1,4 +1,0 @@
-| Command | Description |
-| --- | --- |
-| `$DebugPreference = "Continue"` | Run subsequent commands in debug mode. Useful during scenarios when processes are hanging, and -Verbose is not enough |
-| `Import-Module Microsoft.Graph -Verbose` | Import module |
